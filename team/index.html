@@ -190,13 +190,18 @@ function outputTeamData()
 	$.get("teamData.json", function(data, status){
         if(status)
         {
-            var present_members = shuffle(data[0].members);
+            var faculty_advisors = shuffle(data[0].members);
+            for(var i=0;i<faculty_advisors.length;i++)
+            {
+                $("#faculty-advisors").append(createTeamCard(faculty_advisors[i]));
+            }
+            var present_members = shuffle(data[1].members);
         	for(var i=0;i<present_members.length;i++)
         	{
         		$("#present-members").append(createTeamCard(present_members[i]));
         	}
 
-            var past_members = shuffle(data[1].members);
+            var past_members = shuffle(data[2].members);
             for(var i=0;i<past_members.length;i++)
             {
                 $("#past-members").append(createTeamCard(past_members[i]));
@@ -234,11 +239,12 @@ function createTeamCard(data)
     
     $card_info.append('<p>'+data.description+'</p>');
     var $contact_links = $("<p>",{"class" : "contact-links"});
-    if(data.twitter != "")
+    if(data.twitter)
         $contact_links.append('<a href="http://twitter.com/'+data.twitter+'" class="contact-twitter" target="_blank"></a>');
-    if(data.facebook != "")
-        $contact_links.append('<a href="http://facebook.com/'+data.facebook+'" class="contact-facebook" target="_blank"></a>');
-    
+    if(data.facebook)
+        $contact_links.append('<a href="http://fb.com/'+data.facebook+'" class="contact-facebook" target="_blank"></a>');
+    if(data.website)
+        $contact_links.append('<a href="'+data.website+'" class="contact-home" target="_blank"></a>');
     $card_info.append($contact_links);
     $team_card.append($card_photo);
     $team_card.append($card_info);
@@ -257,19 +263,26 @@ function searchBarFix()
         $(".employee-search").toggleClass("fixed",i);
     }
 }
-$(document).ready(function($){
+$(window).load(function(){
     $("#employee-search-box").on("input", function() {        	
         var e = $(this).val().toLowerCase();
-        var a = $(".team-card");
+        var a = $(".portrait-container");
         var t = [];
-        a.each(function(a, i) {
+        a.children(".team-card").each(function(a, i) {
             var o = $(i).text().toLowerCase();
             if (e === "" || o.indexOf(e) >= 0) {
                 t.push(i);
             };
         });
-        a.css("display", "none");
+        a.children(".team-card").css("display", "none");
         $(t).css("display", "");
+        a.each(function(){
+            if(($(this).children().length - $(this).children('[style~="display: none;"]').length) <= 1) {
+                $(this).css("display","none");
+            } else {
+                $(this).css("display","")
+            }
+        });
     });
     defaultSearchBarPosition = $("#the-team").offset().top;
     $(window).on("scroll",searchBarFix);
@@ -282,14 +295,18 @@ $(document).ready(function($){
         <input type="text" placeholder="Search by name or position..." id="employee-search-box">
     </div>
     <div class="employee-search-spacer"></div>
-    <div id="present-members" class="portrait-container" style="padding-bottom: 292px;">
-    <!-- Team Data Will be added here! -->
+    <div id="faculty-advisors" class="portrait-container" style="padding-bottom: 267px;">
+        <h2 align="center">Faculty Advisor</h2>
+        <!-- Faculty Data Will be added here! -->
+    </div>
+    <div id="present-members" class="portrait-container" style="padding-bottom: 267px;">
         <h2 align="center">Present Members</h2>
+        <!-- Team Data Will be added here! -->
     </div>
     <div id="divider">
         <img style="width:200px;margin-left:auto;margin-right:auto;display:block;" src="../images/divider.png" />
     </div>
-    <!-- <div id="past-members" class="portrait-container" style="padding-bottom: 292px;">
+    <!-- <div id="past-members" class="portrait-container" style="padding-bottom: 267px;">
         <h2 align="center">Past Members</h2>
     </div> -->
     <div class="end-quote">

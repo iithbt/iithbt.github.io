@@ -1,5 +1,17 @@
 [
   { 
+    "team": "facutly",
+    "members": [
+                {
+                  "name": "Deepak Srivastava",
+                  "position": "Facutly Advisor",
+                  "img_normal": "Deepak.jpg",
+                  "description": "Head Of Earth Sciences Department, IIT Roorkee",
+                  "website": "http://www.iitr.ac.in/departments/ES/pages/People+Faculty+dpkesfes.html"
+                }
+              ]
+  },
+  { 
     "team": "present",
     "members": [
                 {
@@ -8,7 +20,6 @@
                   "img_normal": "Devashish.jpg",
                   "img_alternate": "Devashish.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "devashish.jog"
                 },
                 {
@@ -17,7 +28,6 @@
                   "img_normal": "Ashish.jpg",
                   "img_alternate": "Ashish.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "AshishMittal1996"
                 },
                 {
@@ -26,7 +36,6 @@
                   "img_normal": "Shubham.jpg",
                   "img_alternate": "Shubham.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "shubham.pallod.7"
                 },
                 {
@@ -35,7 +44,6 @@
                   "img_normal": "Murtuza.jpg",
                   "img_alternate": "Murtuza1.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "murtuza.merchant.54"
                 },
                 {
@@ -44,7 +52,6 @@
                   "img_normal": "Nabarun.jpg",
                   "img_alternate": "Nabarun.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "pal.nabarun95"
                 },
                 {
@@ -61,7 +68,6 @@
                   "img_normal": "Utsav.jpg",
                   "img_alternate": "Utsav.jpg",
                   "description": "Developer, Panda, Food Enthusiast",
-                  "twitter": "",
                   "facebook": "mangalutsav"
                 },
                 {
@@ -70,7 +76,6 @@
                   "img_normal": "Rahul.jpg",
                   "img_alternate": "Rahul.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "rahulbabbar11"
                 },
                 {
@@ -79,7 +84,6 @@
                   "img_normal": "Swapnil.jpg",
                   "img_alternate": "Swapnil.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "profile.php?id=100004716075755"
                 },
                 {
@@ -88,7 +92,6 @@
                   "img_normal": "Rishabh.jpg",
                   "img_alternate": "Rishabh.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "profile.php?id=100001425739218"
                 },
                 {
@@ -97,7 +100,6 @@
                   "img_normal": "Aditya.jpg",
                   "img_alternate": "Aditya.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "aditya.ganeshthiruvaiyaru"
                 },
                 {
@@ -106,7 +108,6 @@
                   "img_normal": "Shashwat.jpg",
                   "img_alternate": "Shashwat.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "shashwat.kumar.547"
                 },
                 {
@@ -115,7 +116,6 @@
                   "img_normal": "Deepam.jpg",
                   "img_alternate": "Deepam.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "profile.php?id=100001867220832&fref=ts"
                 },
                 {
@@ -124,7 +124,6 @@
                   "img_normal": "Pranjal.jpg",
                   "img_alternate": "Pranjal.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "pranjalmundra"
                 },
                 {
@@ -133,7 +132,6 @@
                   "img_normal": "Aman.jpg",
                   "img_alternate": "Aman.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "profile.php?id=100009440184085&fref=ts"
                 },
                 {
@@ -142,7 +140,6 @@
                   "img_normal": "Raja.jpg",
                   "img_alternate": "Raja.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "raja.jain.1675"
                 },
                 {
@@ -151,7 +148,6 @@
                   "img_normal": "Yash.jpg",
                   "img_alternate": "Yash.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "yshkant"
                 },
                 {
@@ -160,7 +156,6 @@
                   "img_normal": "Sanyam.jpg",
                   "img_alternate": "Sanyam.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "sanyamrajpal97"
                 },
                 {
@@ -169,7 +164,6 @@
                   "img_normal": "Ankit.jpg",
                   "img_alternate": "Ankit.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "ankitvyas.me"
                 },
                 {
@@ -178,7 +172,6 @@
                   "img_normal": "Tanmay.jpg",
                   "img_alternate": "Tanmay.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "being.madridista"
                 },
                 {
@@ -187,7 +180,6 @@
                   "img_normal": "Raunaq.jpg",
                   "img_alternate": "Raunaq.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "raunaq.sarcar.7"
                 },
                 {
@@ -196,7 +188,6 @@
                   "img_normal": "Janhavi.jpg",
                   "img_alternate": "Janhavi.jpg",
                   "description": "",
-                  "twitter": "",
                   "facebook": "janhaviprakashpatil"
                 }
               ]
