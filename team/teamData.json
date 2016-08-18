@@ -1,0 +1,200 @@
+[
+  { 
+    "team": "facutly",
+    "members": [
+                {
+                  "name": "Deepak Srivastava",
+                  "position": "Facutly Advisor",
+                  "img_normal": "Deepak.jpg",
+                  "description": "Head Of Earth Sciences Department, IIT Roorkee",
+                  "website": "http://www.iitr.ac.in/departments/ES/pages/People+Faculty+dpkesfes.html"
+                }
+              ]
+  },
+  { 
+    "team": "present",
+    "members": [
+                {
+                  "name": "Devashish",
+                  "position": "President",
+                  "img_normal": "Devashish.jpg",
+                  "img_alternate": "Devashish.jpg",
+                  "description": "",
+                  "facebook": "devashish.jog"
+                },
+                {
+                  "name": "Ashish",
+                  "position": ["Vice President","Design Head"],
+                  "img_normal": "Ashish.jpg",
+                  "img_alternate": "Ashish.jpg",
+                  "description": "",
+                  "facebook": "AshishMittal1996"
+                },
+                {
+                  "name": "Shubham",
+                  "position": "Editorial Chief",
+                  "img_normal": "Shubham.jpg",
+                  "img_alternate": "Shubham.jpg",
+                  "description": "",
+                  "facebook": "shubham.pallod.7"
+                },
+                {
+                  "name": "Murtuza",
+                  "position": "Finance Head",
+                  "img_normal": "Murtuza.jpg",
+                  "img_alternate": "Murtuza1.jpg",
+                  "description": "",
+                  "facebook": "murtuza.merchant.54"
+                },
+                {
+                  "name": "Nabarun",
+                  "position": "Web Developer Head",
+                  "img_normal": "Nabarun.jpg",
+                  "img_alternate": "Nabarun.jpg",
+                  "description": "",
+                  "facebook": "pal.nabarun95"
+                },
+                {
+                  "name": "Chirag",
+                  "position": "Web & Android Developer",
+                  "img_normal": "Chirag.jpg",
+                  "description": "Sophomore | Geek | Enthusiast",
+                  "twitter": "csoni11",
+                  "facebook": "cmaheshwari11"
+                },
+                {
+                  "name": "Utsav",
+                  "position": "Web Developer",
+                  "img_normal": "Utsav.jpg",
+                  "img_alternate": "Utsav.jpg",
+                  "description": "Developer, Panda, Food Enthusiast",
+                  "facebook": "mangalutsav"
+                },
+                {
+                  "name": "Rahul",
+                  "position": ["Web Developer","Finance Team"],
+                  "img_normal": "Rahul.jpg",
+                  "img_alternate": "Rahul.jpg",
+                  "description": "",
+                  "facebook": "rahulbabbar11"
+                },
+                {
+                  "name": "Swapnil",
+                  "position": "Design Team",
+                  "img_normal": "Swapnil.jpg",
+                  "img_alternate": "Swapnil.jpg",
+                  "description": "",
+                  "facebook": "profile.php?id=100004716075755"
+                },
+                {
+                  "name": "Rishabh",
+                  "position": "Design Team",
+                  "img_normal": "Rishabh.jpg",
+                  "img_alternate": "Rishabh.jpg",
+                  "description": "",
+                  "facebook": "profile.php?id=100001425739218"
+                },
+                {
+                  "name": "Aditya",
+                  "position": "Design Team",
+                  "img_normal": "Aditya.jpg",
+                  "img_alternate": "Aditya.jpg",
+                  "description": "",
+                  "facebook": "aditya.ganeshthiruvaiyaru"
+                },
+                {
+                  "name": "Shashwat",
+                  "position": "Finance Team",
+                  "img_normal": "Shashwat.jpg",
+                  "img_alternate": "Shashwat.jpg",
+                  "description": "",
+                  "facebook": "shashwat.kumar.547"
+                },
+                {
+                  "name": "Deepam",
+                  "position": "Finance Team",
+                  "img_normal": "Deepam.jpg",
+                  "img_alternate": "Deepam.jpg",
+                  "description": "",
+                  "facebook": "profile.php?id=100001867220832&fref=ts"
+                },
+                {
+                  "name": "Pranjal",
+                  "position": "Finance Team",
+                  "img_normal": "Pranjal.jpg",
+                  "img_alternate": "Pranjal.jpg",
+                  "description": "",
+                  "facebook": "pranjalmundra"
+                },
+                {
+                  "name": "Aman",
+                  "position": "Finance Team",
+                  "img_normal": "Aman.jpg",
+                  "img_alternate": "Aman.jpg",
+                  "description": "",
+                  "facebook": "profile.php?id=100009440184085&fref=ts"
+                },
+                {
+                  "name": "Raja",
+                  "position": "Finance Team",
+                  "img_normal": "Raja.jpg",
+                  "img_alternate": "Raja.jpg",
+                  "description": "",
+                  "facebook": "raja.jain.1675"
+                },
+                {
+                  "name": "Yash",
+                  "position": "Editorial Team",
+                  "img_normal": "Yash.jpg",
+                  "img_alternate": "Yash.jpg",
+                  "description": "",
+                  "facebook": "yshkant"
+                },
+                {
+                  "name": "Sanyam",
+                  "position": "Editorial Team",
+                  "img_normal": "Sanyam.jpg",
+                  "img_alternate": "Sanyam.jpg",
+                  "description": "",
+                  "facebook": "sanyamrajpal97"
+                },
+                {
+                  "name": "Ankit",
+                  "position": "Editorial Team",
+                  "img_normal": "Ankit.jpg",
+                  "img_alternate": "Ankit.jpg",
+                  "description": "",
+                  "facebook": "ankitvyas.me"
+                },
+                {
+                  "name": "Tanmay",
+                  "position": "Editorial Team",
+                  "img_normal": "Tanmay.jpg",
+                  "img_alternate": "Tanmay.jpg",
+                  "description": "",
+                  "facebook": "being.madridista"
+                },
+                {
+                  "name": "Raunaq",
+                  "position": "Editorial Team",
+                  "img_normal": "Raunaq.jpg",
+                  "img_alternate": "Raunaq.jpg",
+                  "description": "",
+                  "facebook": "raunaq.sarcar.7"
+                },
+                {
+                  "name": "Janhavi",
+                  "position": "Editorial Team",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "janhaviprakashpatil"
+                }
+              ]
+  },
+  {
+    "team": "past",
+    "members": [
+               ]
+  }
+]

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">IIT HeartBeat</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://iithbt.in/feed.xml" />
+<link rel="alternate" type="text/html" href="http://iithbt.in" />
+<updated>2016-08-07T19:02:22+05:30</updated>
+<id>http://iithbt.in/</id>
+<author>
+  <name>IIT HeartBeat</name>
+  <uri>http://iithbt.in/</uri>
+  <email>iithbt@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Welcome]]></title>
+  <link rel="alternate" type="text/html" href="http://iithbt.in/articles/welcome/" />
+  <id>http://iithbt.in/articles/welcome</id>
+  <published>2016-08-06T22:40:00+05:30</published>
+  <updated>2016-08-06T22:40:00+05:30</updated>
+  <author>
+    <name>Devashish Jog</name>
+    <uri>http://iithbt.in</uri>
+    <email>devashishjog@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.&lt;/p&gt;
+
+&lt;p&gt;IIT Heartbeat is proud to present before you its new venture as it launches its website, where we will be posting blogs related to the topics which easily connects with the youth of our society.&lt;/p&gt;
+
+&lt;p&gt;Hurry Up!!&lt;/p&gt;
+
+&lt;p&gt;Explore the site and enjoy the blogs!!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://iithbt.in/articles/welcome/&quot;&gt;Welcome&lt;/a&gt; was originally published by IIT HeartBeat at &lt;a href=&quot;http://iithbt.in&quot;&gt;IIT HeartBeat&lt;/a&gt; on August 06, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>
