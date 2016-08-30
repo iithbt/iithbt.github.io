@@ -138,7 +138,7 @@
 			// get width of this.$el
 			// this will be necessary to create the flipping layout
 			this.elWidth = this.$el.width();
-			console.log("test : "+this.elWidth);
+			// console.log("test : "+this.elWidth);
 			var transEndEventNames = {
 				'WebkitTransition': 'webkitTransitionEnd',
 				'MozTransition': 'transitionend',
@@ -252,11 +252,11 @@
 
 			
 			this.$el.prepend( $s_left, $s_middle, $s_right );
-			console.log("called middle : "+$s_middle.prop('outerHTML'));
+			// console.log("called middle : "+$s_middle.prop('outerHTML'));
 			// var testing = document.getElementById()
-			console.log("called right : "+$s_right.prop('outerHTML'));
-			console.log("called left : "+$s_left.prop('outerHTML'));
-			console.log(document.getElementsByClassName("bb-item"));
+			// console.log("called right : "+$s_right.prop('outerHTML'));
+			// console.log("called left : "+$s_left.prop('outerHTML'));
+			// console.log(document.getElementsByClassName("bb-item"));
 			this.$items.hide();
 			
 			$s_middle.css({

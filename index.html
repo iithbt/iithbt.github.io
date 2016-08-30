@@ -173,39 +173,23 @@
 <script src="assets/js/zepto.js"></script>
 <script src="assets/js/jquery.waterfall.js"></script>
 <script type="text/javascript">
-	var year = 2016;
+	var year = "2016";
+	var imageCount = [];
+	imageCount["2016"] = 40;
+	imageCount["2015"] = 0;
+	imageCount["2014"] = 0;
 	function createImageId(i) {
 		var $a = $("<div>", {"class": "bb-item"});
 		var $img = $("<img>",{"src": "images/mags/"+year+"/file-page"+i+".jpg"});
 		$a.append($img);
 		return $a;
 	}
-	// function addCloseButton() {
-	// 	var $a = $("<div>", {"class": "bb-close"});
-	// 	var $img = $("<img>",{"src": "images/mags/assets/close.png"});
-	// 	$a.append($img);
-	// 	return $a;
-	// }
+	
 	function additems() {
-		$.ajax({
-    		url: "images/mags/"+year+"/",
-    		success: function (data) {
-    			var parser = new DOMParser(),
-            	doc = parser.parseFromString(data, 'text/html'),
-            	rows = doc.querySelector('table').querySelectorAll('tr');
-            	var image_count = 0;
-            	for (var i=1;i<rows.length;i++) {
-            		if (rows[i].children[2]) {
-                		if (parseInt(rows[i].children[2].innerText)>0) image_count++;         
-            		}
-        		}
-        		for (var i = 1; i <= image_count; i++) {
-					$(".bb-bookblock").append(createImageId(i));
-				};
-				// $(".bb-bookblock").append(addCloseButton());
-				init();
-    		}
-		});
+		for (var i = 1; i <= imageCount[year]; i++) {
+			$(".bb-bookblock").append(createImageId(i));
+		};
+		init();
 	}
 	function clearitems() {
 		$(".bb-bookblock").children(".bb-item").each(function() {
@@ -213,7 +197,6 @@
 		});
 		init();
 	}
-	
 	function openBookBlock(y) {
     	$(".overlay").width("100%");
     	year = y;
@@ -226,30 +209,21 @@
 
 	$(window).load(function()
 	{
-		$(".overlay-link").click(function(){
+		$(".overlay-link").add(".text-link").click(function(){
     		openBookBlock($(this).attr('id'));
 		});
-		$(".text-link").click(function(){
-    		openBookBlock($(this).attr('id'));
+		$(".bb-close").click(function(){
+			closeBookBlock();
 		});
 		$(document).keyup(function(e) {
   			if (e.keyCode === 27) $('.bb-close').click();   // esc
 		});
-		// $(".overlay").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-		// 	init();
-		// });
-
-		// $(".bb-bookblock").css("min-height", function(){return $(this).height();});
 	});
-	// $(window).resize(function() {
-		// $(".bb-bookblock").css("min-height",0);
-    	// $(".bb-bookblock").css("min-height", function(){return $(this).height();});
-	// });
 </script>
 
 <div class="overlay">
 	<div class="bb-custom-wrapper">
-		<div id="bb-close" class="bb-close" onclick="closeBookBlock()">
+		<div class="bb-close">
 			<img src="http://iithbt.in/images/mags/assets/close.png" >
 		</div>
 		<div id="bb-bookblock" class="bb-bookblock">
@@ -263,70 +237,6 @@
 	</div>
 </div>
 
-<!-- <ul class="ch-grid">
-	<li>
-		<div class="ch-item ch-img-1">
-			<div class="ch-info">
-				<h3>Issue 2015</h3>
-				<p><a id="2015" class="overlay-link">Click to Read</a></p>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="ch-item ch-img-2">
-			<div class="ch-info">
-				<h3>Issue 2016</h3>
-				<p><a id="2016" class="overlay-link">Click to Read</a></p>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="ch-item ch-img-3">
-			<div class="ch-info">
-				<h3>Issue 2014</h3>
-				<p><a id="2014" class="overlay-link">Click to Read</a></p>
-			</div>
-		</div>
-	</li> 
-</ul> -->
-
-<!-- <div class="ct-archive">
-<div class="ct-archive-container">
-
-	
-	
-	
-			<div class="ct-row">
-			
-		
-		
-	
-	
-	
-	
-		
-		
-				</div>
-			
-	
-	
-	
-	
-			<div class="ct-row">
-			
-		
-		
-	
-	
-	
-	
-		
-		
-				</div>
-			
-	
-</div>
-</div> -->
 <div class="waterfall" data-col-min-width="300" data-autoresize="true"> 
 
 <article class="post-box">
@@ -391,14 +301,14 @@
 
 </div>
 <div class="latest-issue">
-		<span id="2016" class="overlay-link">
-			<a>
-				<img src="http://iithbt.in/images/mags/2016/file-page1.jpg">
-			</a>
+		<span class="issue-front-cover">
+			<img src="http://iithbt.in/images/mags/2016/file-page1.jpg">
+			<div class="img-overlay">
+           		<a id="2016" class="expand overlay-link">Click To Read</a>
+           	</div>
 		</span>
 		<span >
 			<div class="description-li">
-				
 				<h3 id="2016" class="text-link" style="margin-bottom:0px">Issue 2016</h3>
 				<h5 style="margin-top:0px; margin-bottom:20px;">Cover Story: "Travelling: My Life"</h5>
 				<p>
@@ -407,16 +317,6 @@
 			</div>
 		</span>
 	</div>
-<!-- <ul class="post-list" style="list-style-type:disc;margin-right:20px;margin-left:20px;" >
-
-  <li><article><a href="http://iithbt.in/articles/welcome/"><div class="post-title">Welcome </div><div><span class="entry-date"><time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></span><span class="entry-author"> - Devashish Jog</span></div> <p>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</p></a></article></li>
-
-  <li><article><a href="http://iithbt.in/articles/welcome-Copy/"><div class="post-title">Welcome </div><div><span class="entry-date"><time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></span><span class="entry-author"> - Devashish Jog</span></div> <p>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</p></a></article></li>
-
-  <li><article><a href="http://iithbt.in/articles/welcome-Copy-(3)/"><div class="post-title">Welcome </div><div><span class="entry-date"><time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></span><span class="entry-author"> - Devashish Jog</span></div> <p>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</p></a></article></li>
-
-</ul> -->
-
 
 
 <script type="text/javascript">
