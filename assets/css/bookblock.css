@@ -1,8 +1,22 @@
+.overlay {  
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    transition: 0s; 
+}
+
 .bb-bookblock {
 	text-align: center;
-	width: 60%;
-	height: auto;
+	height: 100%;
+	display: inline-block;
 	margin: 0 auto;
+	margin-top: 20px;
 	position: relative;
 	z-index: 100;
 	-webkit-perspective: 1300px;
@@ -11,12 +25,12 @@
 	backface-visibility: hidden;
 }
 .bb-bookblock .bb-item img {
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
 .bb-inner img {
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
 
 .bb-page {
@@ -45,8 +59,20 @@
 
 .bb-page > div,
 .bb-outer,
-.bb-content,
 .bb-inner {
+	height: 100%;
+	width: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	/*box-shadow: 0px 0px 30px #888999;*/
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-content {
+	height: 100%;
+	width: 200%;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -194,4 +220,97 @@
 .no-js .bb-item {
 	display: block;
 	position: relative;
+}
+
+@font-face {
+	font-family: 'arrows';
+	src:url('../fonts/arrows/arrows.eot');
+	src:url('../fonts/arrows/arrows.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/arrows/arrows.woff') format('woff'),
+		url('../fonts/arrows/arrows.ttf') format('truetype'),
+		url('../fonts/arrows/arrows.svg#arrows') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.bb-custom-wrapper {
+	height: 90%;
+	width: inherit;
+	position: relative;
+	margin: 0 auto 40px;
+	text-align: center;
+}
+
+.bb-custom-wrapper .bb-bookblock {
+	box-shadow: 0 12px 20px -10px rgba(81,64,49,0.6);
+}
+
+.bb-custom-wrapper h3 {
+	font-size: 1.4em;
+	font-weight: 300;
+	margin: 0.4em 0 1em;
+}
+
+.bb-custom-wrapper nav {
+	width: 100%;
+	height: 30px;
+	margin: 1em auto 0;
+	position: relative;
+	z-index: 0;
+	text-align: center;
+}
+
+.bb-custom-wrapper nav a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 2px;
+	background: #72b890;
+	color: #fff;
+	font-size: 0;
+	margin: 2px;
+}
+
+.bb-custom-wrapper nav a:hover {
+	opacity: 0.6;
+}
+
+.bb-custom-icon:before {
+	font-family: 'arrows';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 20px;
+	line-height: 30px;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+
+.bb-custom-icon-first:before,
+.bb-custom-icon-last:before {
+	content: "\e002";
+}
+
+.bb-custom-icon-arrow-left:before,
+.bb-custom-icon-arrow-right:before {
+	content: "\e003";
+}
+
+.bb-custom-icon-arrow-left:before,
+.bb-custom-icon-first:before {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/* No JS */
+.no-js .bb-custom-wrapper {
+	height: auto;
+}
+
+.no-js .bb-custom-content {
+	height: 470px;
 }

@@ -108,19 +108,24 @@
 	    <ul>
       
 		    
-		    <li><a href="http://iithbt.in/" >Home</a></li>
+		    
+		    <li ><a href="http://iithbt.in/"  >Home</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/articles/" >Articles</a></li>
+		    
+		    <li ><a href="http://iithbt.in/articles/"  >Articles</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/team/" >Team</a></li>
+		    
+		    <li class='active'><a href="http://iithbt.in/team/"  >Team</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/about/" >About</a></li>
+		    
+		    <li ><a href="http://iithbt.in/about/"  >About</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/search/" >Search</a></li>
+		    
+		    <li ><a href="http://iithbt.in/search/"  >Search</a></li>
 		  
 	    </ul>
 	</nav>
@@ -152,11 +157,11 @@ function v()
     	{
     		var e = $(".portrait-container");
             $("#the-team .team-card").hover(function() {
-                var a = $(this).children(".card-info").height();
-                var t = parseInt($(".portrait-container").css("padding-bottom"));
-                if (a > t) {
-                    $(".portrait-container").css("padding-bottom", a);
-                }
+                // var a = $(this).children(".card-info").height();
+                // var t = parseInt($(".portrait-container").css("padding-bottom"));
+                // if (a > t) {
+                    // $(".portrait-container").css("padding-bottom", a);
+                // }
                 e.addClass("over-team-card");
             }, function() {
                 e.removeClass("over-team-card");
@@ -295,7 +300,7 @@ $(window).load(function(){
         <input type="text" placeholder="Search by name or position..." id="employee-search-box">
     </div>
     <div class="employee-search-spacer"></div>
-    <div id="faculty-advisors" class="portrait-container" style="padding-bottom: 267px;">
+    <div id="faculty-advisors" class="portrait-container" style="padding-bottom: 140px;">
         <h2 align="center">Faculty Advisor</h2>
         <!-- Faculty Data Will be added here! -->
     </div>

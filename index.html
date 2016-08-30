@@ -8,20 +8,9 @@
   #home_page
   {
     /*background: #f6f8f8;*/
-    background-image: url("http://iithbt.in/images/bg.jpg");
+    /*background-image: url("http://iithbt.in/images/bg.jpg");*/
+    background-color: #eee;
     color: #4C4C4C;
-  }
-  #home_page .entry .entry-wrapper
-  {
-    border-top: 1px solid #F1F1F1;
-    border-right: 1px solid #E7E6E6;
-    border-left: 1px solid #E7E6E6;
-    background: #f6f8f8;
-    border-radius: 16px;
-    border-bottom: 1px solid #CFCFCF;
-    box-shadow: 0px 10px 10px rgba(81,64,49,0.3);
-    max-width: 1108px;
-    width: 90%
   }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -127,19 +116,24 @@
 	    <ul>
       
 		    
-		    <li><a href="http://iithbt.in/" >Home</a></li>
+		    
+		    <li class='active'><a href="http://iithbt.in/"  >Home</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/articles/" >Articles</a></li>
+		    
+		    <li ><a href="http://iithbt.in/articles/"  >Articles</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/team/" >Team</a></li>
+		    
+		    <li ><a href="http://iithbt.in/team/"  >Team</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/about/" >About</a></li>
+		    
+		    <li ><a href="http://iithbt.in/about/"  >About</a></li>
 		  
 		    
-		    <li><a href="http://iithbt.in/search/" >Search</a></li>
+		    
+		    <li ><a href="http://iithbt.in/search/"  >Search</a></li>
 		  
 	    </ul>
 	</nav>
@@ -169,36 +163,95 @@
       </header>
       <br>
       <div class="entry-content">
-        <link rel="stylesheet" type="text/css" href ="assets/css/demo1.css">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-<link rel="stylesheet" type="text/css" href="assets/css/bookblock.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/bookblock.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/CircleHoverEffect.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/homepage.css" />
 <script src="assets/js/modernizr.custom.js"></script>
 <script src="assets/js/jquerypp.custom.js"></script>
 <script src="assets/js/jquery.bookblock.js"></script>
-<script>
+<script src="assets/js/zepto.js"></script>
+<script src="assets/js/jquery.waterfall.js"></script>
+<script type="text/javascript">
+	var year = 2016;
 	function createImageId(i) {
 		var $a = $("<div>", {"class": "bb-item"});
-		var $img = $("<img>",{"src": "images/newmags/file-page"+i+".jpg"});
+		var $img = $("<img>",{"src": "images/mags/"+year+"/file-page"+i+".jpg"});
 		$a.append($img);
 		return $a;
 	}
+	// function addCloseButton() {
+	// 	var $a = $("<div>", {"class": "bb-close"});
+	// 	var $img = $("<img>",{"src": "images/mags/assets/close.png"});
+	// 	$a.append($img);
+	// 	return $a;
+	// }
 	function additems() {
-		for (var i = 1; i <= 40; i++) {
-			$(".bb-bookblock").append(createImageId(i));
-		};
+		$.ajax({
+    		url: "images/mags/"+year+"/",
+    		success: function (data) {
+    			var parser = new DOMParser(),
+            	doc = parser.parseFromString(data, 'text/html'),
+            	rows = doc.querySelector('table').querySelectorAll('tr');
+            	var image_count = 0;
+            	for (var i=1;i<rows.length;i++) {
+            		if (rows[i].children[2]) {
+                		if (parseInt(rows[i].children[2].innerText)>0) image_count++;         
+            		}
+        		}
+        		for (var i = 1; i <= image_count; i++) {
+					$(".bb-bookblock").append(createImageId(i));
+				};
+				// $(".bb-bookblock").append(addCloseButton());
+				init();
+    		}
+		});
+	}
+	function clearitems() {
+		$(".bb-bookblock").children(".bb-item").each(function() {
+			$(this).remove();
+		});
+		init();
+	}
+	
+	function openBookBlock(y) {
+    	$(".overlay").width("100%");
+    	year = y;
+    	additems();
+	}
+	function closeBookBlock() {
+    	$(".overlay").width("0");
+    	clearitems();
 	}
 
 	$(window).load(function()
 	{
-		$(".bb-bookblock").css("min-height", function(){return $(this).height();});
+		$(".overlay-link").click(function(){
+    		openBookBlock($(this).attr('id'));
+		});
+		$(".text-link").click(function(){
+    		openBookBlock($(this).attr('id'));
+		});
+		$(document).keyup(function(e) {
+  			if (e.keyCode === 27) $('.bb-close').click();   // esc
+		});
+		// $(".overlay").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+		// 	init();
+		// });
+
+		// $(".bb-bookblock").css("min-height", function(){return $(this).height();});
 	});
-	$(window).resize(function() {
-		$(".bb-bookblock").css("min-height",0);
-    	$(".bb-bookblock").css("min-height", function(){return $(this).height();});
-	});
+	// $(window).resize(function() {
+		// $(".bb-bookblock").css("min-height",0);
+    	// $(".bb-bookblock").css("min-height", function(){return $(this).height();});
+	// });
 </script>
-<div class="main clearfix">
+
+<div class="overlay">
 	<div class="bb-custom-wrapper">
+		<div id="bb-close" class="bb-close" onclick="closeBookBlock()">
+			<img src="http://iithbt.in/images/mags/assets/close.png" >
+		</div>
 		<div id="bb-bookblock" class="bb-bookblock">
 		</div>
 		<nav>
@@ -209,97 +262,237 @@
 		</nav>
 	</div>
 </div>
-<ul class="post-list" style="list-style-type:disc;margin-right:20px;margin-left:20px;" >
+
+<!-- <ul class="ch-grid">
+	<li>
+		<div class="ch-item ch-img-1">
+			<div class="ch-info">
+				<h3>Issue 2015</h3>
+				<p><a id="2015" class="overlay-link">Click to Read</a></p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="ch-item ch-img-2">
+			<div class="ch-info">
+				<h3>Issue 2016</h3>
+				<p><a id="2016" class="overlay-link">Click to Read</a></p>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="ch-item ch-img-3">
+			<div class="ch-info">
+				<h3>Issue 2014</h3>
+				<p><a id="2014" class="overlay-link">Click to Read</a></p>
+			</div>
+		</div>
+	</li> 
+</ul> -->
+
+<!-- <div class="ct-archive">
+<div class="ct-archive-container">
+
+	
+	
+	
+			<div class="ct-row">
+			
+		
+		
+	
+	
+	
+	
+		
+		
+				</div>
+			
+	
+	
+	
+	
+			<div class="ct-row">
+			
+		
+		
+	
+	
+	
+	
+		
+		
+				</div>
+			
+	
+</div>
+</div> -->
+<div class="waterfall" data-col-min-width="300" data-autoresize="true"> 
+
+<article class="post-box">
+    <div class="image-container">
+        <a href="http://iithbt.in/articles/welcome/" class="link"><img src="http://iithbt.in/images/welcome.jpg" alt="Welcome" class="post-image" /></a>
+    </div>
+    <div class="post-container">
+    	<a href="http://iithbt.in/articles/welcome/" class="link">
+        	<h2 class="title">Welcome</h2>
+        </a>
+        <p class="subline">By Devashish Jog on <time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></p>
+        <p class="excerpt">
+            <span>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</span>
+        </p>
+    </div>
+</article>
+
+<article class="post-box">
+    <div class="image-container">
+        <a href="http://iithbt.in/articles/welcome-Copy/" class="link"><img src="http://iithbt.in/images/welcome.jpg" alt="Welcome" class="post-image" /></a>
+    </div>
+    <div class="post-container">
+    	<a href="http://iithbt.in/articles/welcome-Copy/" class="link">
+        	<h2 class="title">Welcome</h2>
+        </a>
+        <p class="subline">By Devashish Jog on <time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></p>
+        <p class="excerpt">
+            <span>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</span>
+        </p>
+    </div>
+</article>
+
+<article class="post-box">
+    <div class="image-container">
+        <a href="http://iithbt.in/articles/welcome-Copy-(3)/" class="link"><img src="http://iithbt.in/images/welcome.jpg" alt="Welcome" class="post-image" /></a>
+    </div>
+    <div class="post-container">
+    	<a href="http://iithbt.in/articles/welcome-Copy-(3)/" class="link">
+        	<h2 class="title">Welcome</h2>
+        </a>
+        <p class="subline">By Devashish Jog on <time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></p>
+        <p class="excerpt">
+            <span>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</span>
+        </p>
+    </div>
+</article>
+
+<article class="post-box">
+    <div class="image-container">
+        <a href="http://iithbt.in/articles/welcome-Copy-(2)/" class="link"><img src="http://iithbt.in/images/welcome.jpg" alt="Welcome" class="post-image" /></a>
+    </div>
+    <div class="post-container">
+    	<a href="http://iithbt.in/articles/welcome-Copy-(2)/" class="link">
+        	<h2 class="title">Welcome</h2>
+        </a>
+        <p class="subline">By Devashish Jog on <time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></p>
+        <p class="excerpt">
+            <span>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</span>
+        </p>
+    </div>
+</article>
+
+</div>
+<div class="latest-issue">
+		<span id="2016" class="overlay-link">
+			<a>
+				<img src="http://iithbt.in/images/mags/2016/file-page1.jpg">
+			</a>
+		</span>
+		<span >
+			<div class="description-li">
+				
+				<h3 id="2016" class="text-link" style="margin-bottom:0px">Issue 2016</h3>
+				<h5 style="margin-top:0px; margin-bottom:20px;">Cover Story: "Travelling: My Life"</h5>
+				<p>
+				Hey folks!<br>IIT Heartbeat is back with its new edition. The wait was long but we've made sure it was worth it. In this edition, we have covered different concerned areas of student's life with a spice of fun. You are sure to have a wonderful experience while going through the articles. Information related to other IIT's, doubts related to career, fiction, poems, fun facts, alumni experinces...
+				</p>
+			</div>
+		</span>
+	</div>
+<!-- <ul class="post-list" style="list-style-type:disc;margin-right:20px;margin-left:20px;" >
 
   <li><article><a href="http://iithbt.in/articles/welcome/"><div class="post-title">Welcome </div><div><span class="entry-date"><time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></span><span class="entry-author"> - Devashish Jog</span></div> <p>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</p></a></article></li>
 
-</ul>
+  <li><article><a href="http://iithbt.in/articles/welcome-Copy/"><div class="post-title">Welcome </div><div><span class="entry-date"><time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></span><span class="entry-author"> - Devashish Jog</span></div> <p>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</p></a></article></li>
+
+  <li><article><a href="http://iithbt.in/articles/welcome-Copy-(3)/"><div class="post-title">Welcome </div><div><span class="entry-date"><time datetime="2016-08-06T22:40:00+05:30">August 06, 2016</time></span><span class="entry-author"> - Devashish Jog</span></div> <p>A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.</p></a></article></li>
+
+</ul> -->
+
+
+
 <script type="text/javascript">
-var Page = (function() {
-				
-			var config = {
-					$bookBlock : $( '#bb-bookblock' ),
-					$navNext : $( '#bb-nav-next' ),
-					$navPrev : $( '#bb-nav-prev' ),
-					$navFirst : $( '#bb-nav-first' ),
-					$navLast : $( '#bb-nav-last' )
-				},
-				init = function() {
-					config.$bookBlock.bookblock( {
-						speed : 1000,
-						shadowSides : 0.8,
-						shadowFlip : 0.7
-					} );
-					initEvents();
-				},
-				initEvents = function() {
-						
-					var $slides = config.$bookBlock.children();
+var config = {	$bookBlock : $( '#bb-bookblock' ),
+				$navNext : $( '#bb-nav-next' ),
+				$navPrev : $( '#bb-nav-prev' ),
+				$navFirst : $( '#bb-nav-first' ),
+				$navLast : $( '#bb-nav-last' )
+	};
+function init() {
+	config.$bookBlock.bookblock( {
+		speed : 1000,
+		shadowSides : 0.8,
+		shadowFlip : 0.7
+	} );
+	initEvents();
+}
+function initEvents() {
+	var $slides = config.$bookBlock.children();
+	// add navigation events
+	config.$navNext.on( 'click touchstart', function() {
+		config.$bookBlock.bookblock( 'next' );
+		return false;
+	} );
 
-						// add navigation events
-					config.$navNext.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'next' );
-						return false;
-					} );
+	config.$navPrev.on( 'click touchstart', function() {
+		config.$bookBlock.bookblock( 'prev' );
+		return false;
+	} );
 
-					config.$navPrev.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'prev' );
-						return false;
-					} );
+	config.$navFirst.on( 'click touchstart', function() {
+		config.$bookBlock.bookblock( 'first' );
+		return false;
+	} );
 
-					config.$navFirst.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'first' );
-						return false;
-					} );
+	config.$navLast.on( 'click touchstart', function() {
+		config.$bookBlock.bookblock( 'last' );
+		return false;
+	} );
+	// add swipe events
+	$slides.on( {
+		'swipeleft' : function( event ) {
+			config.$bookBlock.bookblock( 'next' );
+			return false;
+		},
+		'swiperight' : function( event ) {
+			config.$bookBlock.bookblock( 'prev' );
+			return false;
+		}
+	} );
+	// add keyboard events
+	$( document ).keydown( function(e) {
+		var keyCode = e.keyCode || e.which,
+			arrow = {
+				left : 37,
+				up : 38,
+				right : 39,
+				down : 40
+			};
 
-					config.$navLast.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'last' );
-						return false;
-					} );
-						
-					// add swipe events
-					$slides.on( {
-						'swipeleft' : function( event ) {
-							config.$bookBlock.bookblock( 'next' );
-							return false;
-						},
-						'swiperight' : function( event ) {
-							config.$bookBlock.bookblock( 'prev' );
-							return false;
-						}
-					} );
-
-					// add keyboard events
-					$( document ).keydown( function(e) {
-						var keyCode = e.keyCode || e.which,
-							arrow = {
-								left : 37,
-								up : 38,
-								right : 39,
-								down : 40
-							};
-
-						switch (keyCode) {
-							case arrow.left:
-								config.$bookBlock.bookblock( 'prev' );
-								break;
-							case arrow.right:
-								config.$bookBlock.bookblock( 'next' );
-								break;
-						}
-					} );
-				};
-
-				return { init : init };
-
-		})();
-		additems();
-		Page.init();
+		switch (keyCode) {
+			case arrow.left:
+				config.$bookBlock.bookblock( 'prev' );
+				break;
+			case arrow.right:
+				config.$bookBlock.bookblock( 'next' );
+				break;
+		}
+	} );
+};
 </script>
 
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
   </article>
+  
 </div><!-- /#main -->
 
 <div class="footer-wrapper">

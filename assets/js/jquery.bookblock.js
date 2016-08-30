@@ -115,7 +115,7 @@
 		// isLimit is true if the current page is the last one (or the first one)
 		onEndFlip : function(old, page, isLimit) { return false; },
 		// callback before the flip transition
-		// page is the current item´s index
+		// page is the current item´s indexe
 		onBeforeFlip : function(page) { return false; }
 	};
 
@@ -138,6 +138,7 @@
 			// get width of this.$el
 			// this will be necessary to create the flipping layout
 			this.elWidth = this.$el.width();
+			console.log("test : "+this.elWidth);
 			var transEndEventNames = {
 				'WebkitTransition': 'webkitTransitionEnd',
 				'MozTransition': 'transitionend',
@@ -223,8 +224,9 @@
 
 		},
 		_layoutNoSupport : function(dir) {
-			this.$items.hide();
+			
 			this.$nextItem.show();
+			this.$items.hide();
 			this.end = false;
 			this.isAnimating = false;
 			var isLimit = dir === 'next' && this.current === this.itemsCount - 1 || dir === 'prev' && this.current === 0;
@@ -248,16 +250,24 @@
 				$o_right = $s_right.find( 'div.bb-overlay' ),
 				speed = this.end ? 400 : this.options.speed;
 
-			this.$items.hide();
+			
 			this.$el.prepend( $s_left, $s_middle, $s_right );
+			console.log("called middle : "+$s_middle.prop('outerHTML'));
+			// var testing = document.getElementById()
+			console.log("called right : "+$s_right.prop('outerHTML'));
+			console.log("called left : "+$s_left.prop('outerHTML'));
+			console.log(document.getElementsByClassName("bb-item"));
+			this.$items.hide();
 			
 			$s_middle.css({
 				transitionDuration: speed + 'ms',
 				transitionTimingFunction : this.options.easing
 			}).on( this.transEndEventName, function( event ) {
 				if ( $( event.target ).hasClass( 'bb-page' ) ) {
-					self.$el.children( '.bb-page' ).remove();
 					self.$nextItem.show();
+
+					self.$el.children( '.bb-page' ).remove();
+				
 					self.end = false;
 					self.isAnimating = false;
 					var isLimit = dir === 'next' && self.current === self.itemsCount - 1 || dir === 'prev' && self.current === 0;
@@ -330,6 +340,7 @@
 
 				}
 			}, 25 );
+
 		},
 		// adds the necessary sides (bb-page) to the layout 
 		_addSide : function( side, dir ) {
@@ -378,7 +389,7 @@
 							</div>
 						</div>
 						*/
-					$side = $('<div class="bb-page"><div class="bb-front" style="position:absolute;"><div class="bb-outer"><div class="bb-content"><div class="bb-inner">' + (dir === 'next' ? this.$current.html() : this.$nextItem.html()) + '</div></div><div class="bb-flipoverlay"></div></div></div><div class="bb-back" style="position:absolute;"><div class="bb-outer"><div class="bb-content" style="width:' + this.elWidth + 'px"><div class="bb-inner">' + ( dir === 'next' ? this.$nextItem.html() : this.$current.html() ) + '</div></div><div class="bb-flipoverlay"></div></div></div></div>').css( 'z-index', 103 );
+					$side = $('<div class="bb-page"><div class="bb-front" style="position:absolute;"><div class="bb-outer"><div class="bb-content"><div class="bb-inner">' + (dir === 'next' ? this.$current.html() : this.$nextItem.html()) + '</div></div><div class="bb-flipoverlay"></div></div></div><div class="bb-back" style="position:absolute;"><div class="bb-outer"><div class="bb-content" ><div class="bb-inner">' + ( dir === 'next' ? this.$nextItem.html() : this.$current.html() ) + '</div></div><div class="bb-flipoverlay"></div></div></div></div>').css( 'z-index', 103 );
 					break;
 				case 'right':
 						/*
@@ -467,8 +478,9 @@
 			if ( this.options.autoplay ) {
 				this._stopSlideshow();
 			}
-			this.$el.removeClass( 'bb-' + this.options.orientation );
 			this.$items.show();
+			this.$el.removeClass( 'bb-' + this.options.orientation );
+			
 
 			if ( this.options.nextEl !== '' ) {
 				$( this.options.nextEl ).off( '.bookblock' );
