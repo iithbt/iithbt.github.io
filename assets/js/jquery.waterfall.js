@@ -67,7 +67,6 @@ Like masonry column shift, but works. */
          * @private
          */
 		_create: function(opts) {
-
             // local vard
 			var self = this,
 				o = self.options = $.extend({}, self.options, opts);
@@ -334,6 +333,7 @@ Like masonry column shift, but works. */
          * @returns {Waterfall}
          */
 		reflow: function() {
+			// console.log("run");
             // get local vars
 			var self = this,
 				o = self.options;
