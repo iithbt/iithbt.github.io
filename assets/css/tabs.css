@@ -122,7 +122,7 @@
   display: none;
   margin: 0 auto;
   padding: 1em;
-  padding-bottom: 2.5em;
+  padding-bottom: 0.01em;
   max-width: 1200px;
   text-align: center;
 }
@@ -144,6 +144,14 @@
     color: #898989;
     font-size: 1rem;
     line-height: 1.875rem;
+    letter-spacing: 0;
+}
+.content-wrap section .footer {
+    font-family: sans-serif;
+    color: #777;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding-top: 1em;
     letter-spacing: 0;
 }
 
