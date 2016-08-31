@@ -1,0 +1,228 @@
+/* Default tab style */
+
+@font-face {
+  font-family: 'Pe-icon-7-stroke';
+  src:url('../fonts/pixdenicon/Pe-icon-7-stroke.eot?d7yf1v');
+  src:url('../fonts/pixdenicon/Pe-icon-7-stroke.eot?#iefixd7yf1v') format('embedded-opentype'),
+    url('../fonts/pixdenicon/Pe-icon-7-stroke.woff?d7yf1v') format('woff'),
+    url('../fonts/pixdenicon/Pe-icon-7-stroke.ttf?d7yf1v') format('truetype'),
+    url('../fonts/pixdenicon/Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.tabs {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+/* Nav */
+.tabs nav {
+  text-align: center;
+}
+
+.tabs nav ul {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+.tabs nav ul li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.tabs nav a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2.5;
+}
+
+.tabs nav a span {
+  vertical-align: middle;
+  font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+  color: #74777b;
+}
+
+.tabs nav a:focus {
+  outline: none;
+}
+
+/* Icons */
+.icon::before {
+  z-index: 10;
+  display: inline-block;
+  margin: 0 0.4em 0 0;
+  vertical-align: middle;
+  text-transform: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 1.3em;
+  font-family: 'Pe-icon-7-stroke';
+  line-height: 1;
+  speak: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-edit::before {
+  content: "\e62c";
+}
+.icon-design::before {
+  content: "\e65d";
+}
+.icon-finance::before {
+  content: "\e68c";
+}
+.icon-webd::before {
+  content: "\e64f";
+}
+
+/* Content */
+.content-wrap {
+  position: relative;
+}
+
+.content-wrap section {
+  display: none;
+  margin: 0 auto;
+  padding: 1em;
+  padding-bottom: 2.5em;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.content-wrap section.content-current {
+  display: block;
+}
+
+.content-wrap section p.title {
+    margin: 0;
+    padding: 0.75em 0;
+    color: rgba(40,44,42,0.7);
+    font-weight: 700;
+    font-size: 1.8em;
+    line-height: 1;
+}
+.content-wrap section .content {
+    font-family: 'Quattrocento', serif;
+    color: #898989;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    letter-spacing: 0;
+}
+
+/* Fallback */
+.no-js .content-wrap section {
+  display: block;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+
+.no-flexbox nav ul {
+  display: block;
+}
+
+.no-flexbox nav ul li {
+  min-width: 15%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 58em) {
+  .tabs nav a.icon span {
+    display: none;
+  }
+  .tabs nav a:before {
+    margin-right: 0;
+  }
+}
+
+/*Flip Style css*/
+
+.tabs-style-flip {
+  max-width: 1200px;
+}
+
+.tabs-style-flip nav a {
+  padding: 0.5em 0;
+  color: #2CC185;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.tabs-style-flip nav a:hover,
+.tabs-style-flip nav a:focus,
+.tabs-style-flip nav li.tab-current a {
+  color: #74777b;
+}
+
+.tabs-style-flip nav a span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 0.625em;
+}
+
+.tabs-style-flip nav a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  -webkit-transform: perspective(900px) rotate3d(1,0,0,90deg);
+  transform: perspective(900px) rotate3d(1,0,0,90deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-perspective-origin: 50% 100%;
+  perspective-origin: 50% 100%;
+}
+
+.tabs-style-flip nav li.tab-current a::after {
+  background-color: #fff;
+  -webkit-transform: perspective(900px) rotate3d(1,0,0,0deg);
+  transform: perspective(900px) rotate3d(1,0,0,0deg);
+}
+
+.tabs-style-flip .content-wrap {
+  background: #fff;
+}

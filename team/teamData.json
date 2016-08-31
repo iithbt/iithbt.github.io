@@ -3,10 +3,10 @@
     "team": "facutly",
     "members": [
                 {
-                  "name": "Deepak Srivastava",
+                  "name": "Prof. D C Shrivastava",
                   "position": "Facutly Advisor",
                   "img_normal": "Deepak.jpg",
-                  "description": "Head Of Earth Sciences Department, IIT Roorkee",
+                  "description": "Head Of Department Earth Sciences, IIT Roorkee",
                   "website": "http://www.iitr.ac.in/departments/ES/pages/People+Faculty+dpkesfes.html"
                 }
               ]
@@ -117,6 +117,14 @@
                   "img_alternate": "Deepam.jpg",
                   "description": "",
                   "facebook": "profile.php?id=100001867220832&fref=ts"
+                },
+                {
+                  "name": "Blessy",
+                  "position": "Finance Team",
+                  "img_normal": "Blessy.jpg",
+                  "img_alternate": "Blessy.jpg",
+                  "description": "",
+                  "facebook": "blessy.vohra"
                 },
                 {
                   "name": "Pranjal",
