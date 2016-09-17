@@ -1,81 +1,25 @@
+---
+sitemap: false
+---
+
 [
-
-  
-    {
-      "title"			: "Chit Chat with Arpit Agrawal",
-      "link"			: "http://iithbt.in/articles/Chit-Chat-With-Arpit/",
-      "excerpt"		: "Arpit Agrawal is a software engineer turned author, who had his first release in 2013 as ‘Dear Life, Get Well Soon’. The book is a collection of short stories, mostly revolving around the main lead ‘Fatso’ and his troubles with life. He is now all set to release his second book ‘Take My Heart Forever’. Following is an interview with the author"
+{% for post in site.posts %}
+  {% if post.title != null and post.title != empty and post.search_omit != true %}
+    {% if forloop.index > 1 %},{% endif %}{
+      "title"			: {{ post.title | jsonify }},
+      "link"			: "{{ site.url }}{{ post.url }}",
+      "excerpt"		: "{{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once | remove: '\[' | remove: '\]' | remove: '\(' | remove: '\)' }}"
     }
-  
+  {% endif %}
+{% endfor %}
 
-  
-    ,{
-      "title"			: "Ere ,break of the day",
-      "link"			: "http://iithbt.in/articles/ere-break-of-the-day/",
-      "excerpt"		: "A refreshing poem"
+{% for page in site.pages %}
+  {% if page.layout != 'none' and page.layout != 'none' and page.title != null and page.title != empty and page.search_omit != true %}
+    {% if forloop.index > 1 %},{% endif %}{
+      "title"			: {{ page.title | jsonify }},
+      "link"			: "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+      "excerpt"		: "{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}"
     }
-  
-
-  
-    ,{
-      "title"			: "Arab Springs",
-      "link"			: "http://iithbt.in/articles/arab-springs/",
-      "excerpt"		: "From hundreds of years, common people in Arab countries were struggling with the problems like political corruption, inflation, unemployment, poverty, human right violations."
-    }
-  
-
-  
-    ,{
-      "title"			: "Let’s Discuss Future",
-      "link"			: "http://iithbt.in/articles/future-talk/",
-      "excerpt"		: "I would like to start with a story I came across few days back about a possible future event, or perhaps my imagination."
-    }
-  
-
-  
-    ,{
-      "title"			: "Welcome",
-      "link"			: "http://iithbt.in/articles/welcome/",
-      "excerpt"		: "A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs."
-    }
-  
-
-
-
-  
-
-  
-
-  
-    ,{
-      "title"			: "Team",
-      "link"			: "http://iithbt.in/team/",
-      "excerpt"		: "Team Page of IIT HeartBeat"
-    }
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    ,{
-      "title"			: "About IIT Heartbeat",
-      "link"			: "http://iithbt.in/about/",
-      "excerpt"		: "The Inter IIT magazine"
-    }
-  
-
-  
-
-  
-
-  
-
+  {%endif%}
+{% endfor %}
 ]

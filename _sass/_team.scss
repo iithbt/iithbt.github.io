@@ -1,0 +1,207 @@
+
+div.end-quote { 
+    text-align: center;
+}
+
+div.end-quote .quote-text {
+    font-family: 'Lovers Quarrel', cursive;
+    font-size:30px;
+    color: #5f2f2f;
+    @include media($medium) {
+        font-size: 40px;
+    }
+    @include media($large) {
+        font-size: 50px;
+    }
+}
+
+.employee-search-spacer {
+    height: 50px
+}
+
+.employee-search {
+    border: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 3
+}
+
+.employee-search #employee-search-box {
+    background: 0;
+    border: 0;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    outline: 0;
+    text-align: center;
+    width: 100%
+}
+
+.employee-search.fixed {
+    background: rgba(255,255,255,0.9);
+    left: 0;
+    position: fixed;
+    top: 0
+}
+
+#the-team .section-header {
+    padding-top: 18px
+}
+
+#the-team .portrait-container {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 30px auto;
+    overflow: hidden;
+    text-align: center;
+    width: 94%
+}
+
+#the-team .team-card .card-photo {
+    transition: opacity .5s,-webkit-filter .5s;
+    transition: opacity 500ms 2.40477ms, filter;
+}
+
+#the-team .over-team-card .team-card {
+    cursor: pointer
+}
+
+#the-team .over-team-card .team-card .card-photo {
+    opacity: .5;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%)
+}
+
+#the-team .over-team-card .team-card:hover .card-photo {
+    opacity: 1.0;
+    -webkit-filter: none;
+    filter: none
+}
+
+#the-team .over-team-card .team-card:hover .card-info {
+    display: block;
+    cursor: default
+}
+
+#the-team .over-team-card .card-photo:hover .normal {
+    display: none
+}
+
+#the-team .over-team-card .card-photo:hover .alternate {
+    display: block
+}
+
+#the-team .team-card {
+    width: 200px;
+    display: inline-block;
+    margin: 0 15px 15px 0;
+    min-height: 267px;
+    position: relative
+}
+
+#the-team .card-photo {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+#the-team .card-photo img {
+    object-fit: cover;
+    height: 267px;
+    display: block;
+    width: 200px
+}
+
+#the-team .card-photo img.alternate {
+    display: none
+}
+
+#the-team .card-info {
+    background: white;
+    display: none;
+    min-height: 292px;
+    padding: 15px 5px 10px 5px;
+    position: absolute;
+    top: 267px;
+    width: 200px;
+    z-index: 2;
+}
+
+.team-card h2,.team-card h3 {
+    color: #444;
+    text-align: center
+}
+
+.team-card h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+
+.team-card h3 {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 0.8;
+    margin-bottom: 10px
+}
+
+.team-card p {
+    color: #444;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-align: center
+}
+
+.team-card .contact-links {
+    text-align: center
+}
+
+.team-card .contact-links a {
+    display: inline-block;
+    height: 30px;
+    margin-left: 7px;
+    text-decoration: none;
+    width: 30px;
+    border-bottom: 0
+}
+
+.team-card .contact-links a:hover {
+    opacity: .5;
+    border-bottom: 0
+}
+
+
+.team-card .contact-email {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAABFFBMVEUAAADCwsKRkZGmpqajo6OKioqhoaG1tbWkpKR6enrLy8tubm5sbGykpKTDw8N4eHimpqaoqKisrKylpaXV1dVxcXGBgYF+fn6QkJC9vb2AgIDr6+unp6e5ubmenp6ioqJ0dHSbm5uenp6xsbGUlJSzs7N6enqurq6Hh4eQkJCAgIBzc3OLi4uQkJC4uLjJycnGxsbj4+Ojo6OcnJympqa4uLiampqQkJCHh4d+fn6UlJSLi4uIiIh6enpvb29tbW1qamqjo6OXl5eMjIx4eHi6urqcnJyioqJ2dnZpaWmZmZl2dnakpKSlpaWRkZGjo6Ofn5+ioqKQkJCdnZ2bm5uVlZWCgoKPj4+hoaGIiIiMjIxxcXHZyiqCAAAATHRSTlMAUyKy5z7zCdapDfK/yHKMv8y0FgSa4t01LsAYiSXq3LPZTzj9SKC4X7x08FDlYURlFUXtwqO+0Gfq7XcvueWIyZ7+tEiBsJfi0JX9uBcFPgAAAVxJREFUeF5VkIWS4zAMhv+2adItbhmuyLDMeMxX2+GU3v89VvYknb1vNKOMPktWjIjk5y+Z/afsMo7/SPZPgt3Y951trfBOGdX9zmVcYftPj5EoZwOXcxbCTVEIz2e3JjdNxiiYzFy0lSgEqqJCQWYC4HVl8fCwalOfDwYwFdxkZjEVktNkqxdDvL5hpqb9NmAQFUzOctRiJzDf0qBSc9AqQ7I8OR9944wPUPVJHCOdqDfkD/25QHJNq+voe0oAv4J5/O+qCSloDXwMxWn951nm32xhKMEYjlwlTjMxNM+RzrWMhsMZiRePUmJIdQWZH4KEhsYzpW7tAhGJ2phm3AILuXbv61HI9Lu3YczKA0OXkxFrRwjhOMIRFt198wGo3Ms34AfkzW4eRKfLiOjRJdasAsm1TlUVptJWkQYpRj2bHZztlq4QUW7rG1s1WFbqEu/p5EspTdeKd7E0FG/sfWNgzuyx6gAAAABJRU5ErkJggg==") no-repeat;
+    background-size: cover
+}
+
+.team-card .contact-twitter {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAAM1BMVEUAAABJutVJutVJutVJutVJutVJutVJutVJutVJutVJutVJutVJutVJutVJutVJutVJutWXomQJAAAAEHRSTlMAECAwQFBgcICPn6+/z9/vIxqCigAAAaRJREFUeF6FldGygyAMRIMEAgjJ/v/X3vGOClRaz0Mf9AzZWSjSAmZJwuzolZAbLrSEX6pLCqDmJBxTrgAsb9/kZEAJQ4BQDEjLRL4BaXtMMyg/5Wioq6muAOlTFkBoTTCUT9k8fcPrrMcur3A6hvGGlTwJvfoGod8w7CoyodIb+YruDNur7fSUEtLqdSy7HMK5UjwX13tpjmNrAExEr2eKI3noZe6IffDJHrYruRy/vZx6b3LETbmmYf+vzw02Gh926fL9VkFEQ32CA01MOy7opsATI9/21vCJdTshEA/9VX3YffC/KZBh1oMy2wnck+BBnG0ZH8SH7SZ7yk1bWQSZ7UwdxYRt1EmI5FDnYz8iNFDA5xatsxQaaYdYEEbd1961m9ZBnc6gZ04NN5lGro0xc4sUlbs4/g1y73CTav9q8vRBxH4GMkevKPgqsrzK/V5wivAi+2GjGObf7gcZ56j7Jbc5a4H6X3KjiQLj7xdy+5ycgOzWbawqCwaNDzcqTJbxCqB5jL+JYvk16gdFS+KDVBqAnX91JTs6VTZ6w4d0EBer/gHdTR++HpouYwAAAABJRU5ErkJggg==") no-repeat;
+    background-size: cover
+}
+
+.team-card .contact-facebook {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO6SURBVGhDxZndSxRRGIcXuuyiCEqooKi7PtTM0p3ZlYIiydTSmbPrVlBdB/UXRNcVlAR+7MzZ9auw7ooiorLLbgQrJJAio4ywrCzESl1P5+y+aru9q+fM7Iw/eBA8Z97zMM6cjzFQyGiGXacT2hsk1nvdoFOaYU3wnwOcS1qkYyt0W97okcQ5LjkeiiRZKJKQgDLef1Y37JHyBroFyvgQ8/YKjST6Q9EOREoBQlko2pnSiN0Mlb1JJbHu6QQRcAVlVbEepjVaJ2CYwmRPbXx7VewmMmAhEXe+awSGdJdKM36FP4fIIN4Qbupiuw+0r4Lh1RMiiUGssB9UGq0bQEM+yyks4DMTq4heKwKdpaMR6zJWyAl7GyxWUtPKdnKKa1pYaW0bKz8aR/tilNQnV4NW/oQareL0S4EUUKG8Ps4Gh0ZZvpTVtaPX5SJmFlDLn6rj7meJfbEkqOVPWb2ctEA3k49A7//w5+gOdpEKmmmzVGoW1PJHRVosRHur4xtBMzvyy3F+zl68D1qLR0mao5v0N2guRCO0H+usgpjPx3/+Aq3FI/tM/0uwwd4EupmE3e4lOEL6z9QMaC1E/Hk1M71Zmge7fin43R4GXbGnoOexTqoImemZFKhmMvzhG9rXEfzGgjJ/AQn9jnZSBJMeejuG9nVKZSMlaelCvIACP6T1aPIzSOMdVPFFmtDp9BEJa5Rhf6yDVZ/umefQqW42kyP9+t3XrD5zuNmXi+e5F2uQ4WryGaipZeTTD7SeLAFxCMUaZHAqfffxEFpPloA4NWMNMjiVvnCtD60nC3+mrQmsQQan0ofP3EDrySLu9ADWIIPYK5ceaZtH7JtzZ49Xb75k9RG43foK6UtYgxP8mPIEAfHlB2twgj/SycxSjjeq49PiMpmW1gtwvBL4Ia0ZiecZadP6iHVQxQ/pbcatNWnpivrWzVgHVTyXjnZmH3LD/BdoRwW8luanqyegm4lO7GasowqeSkdh1shNVczdSuWltBZJPADN7AQN+6Sb1corafFREhTx8H3uKHahDJ5I85oasRtBL3/CTd14gSUQ0rmHALfSQUIHQWvxBI+1rMMK+I1GEtOgJBfxfVh8bsWK+YGy8Fx21FpFWEGv4e/VFCg4S/HByyvDMWfPuDLipYskX8LQ7sNXo6fiRUMHKwBiWquQmSVUs6vu+nrdpL8K+m85vtLxeg9hCO9SwjdYmkmHHX+ZEn+xaAfTzUQflPQ3wYht8js1xh+d6aVWU76/mdQM+iJk0LVwuYMEAn8BysAONpsXyEAAAAAASUVORK5CYII=") no-repeat;
+    background-size: cover
+}
+
+.team-card .contact-blog {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAAM1BMVEUAAADyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFfyrFf115QyAAAAEHRSTlMAECAwQFBgcICPn6+/z9/vIxqCigAAAYFJREFUeF6N1QuqhDAMBdD+m9Y2uftf7UOphJmJ9V1QpBxMMFWdkZQq1ZS8e01uE3e45x31xABGo5oKtQFAWnjCJEDPXhdyF4DMjuIEKPxUE3D6xUUwrKq+A/SNK1CdnSzo31iie0rkT14UW/EMUhwFD1iBPvqJ6vZJEL8AYdimHKMu1O7WvSCYuAIA+9X6QgQycS/95H3VWReMYGLg4rIWGGeVjP6AF1+6oV7nbOPFj6XjdTXhTbx4i26FzyoYGwzxuojoEtoOR10lZJdA/8OXrKivWDUhvWLVFeUNq76Od6y6bbGGUJzHeMFaNjnH0FqywW6esOs+kSLPOGB87MGIxS18D0buvZBxchPra9Du2RMubuOCYzUkXgcjxcSO75nT6ryNTiUFE+t3wTOy2ydCgs5U4hZ7RlVAYL/DE/1zqhx3eH5vAknPH+T5XZmAZnZDQDd/AVx+bGFINdvrALfoNKEyMIKzEzoA7pTOUJ8AjrR7VvWAZtTg3hIznSnGXf8Aobkbf1r+VCQAAAAASUVORK5CYII=") no-repeat;
+    background-size: cover
+}
+
+.team-card .contact-home {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAAM1BMVEUAAAD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVD/YVC8K06bAAAAEHRSTlMAECAwQFBgcICPn6+/z9/vIxqCigAAAXhJREFUeF6V1d2WgyAMBGB+AgSKybz/0+6W0+yqUGvnwqtPnBMU3SJEhQuRdx+T6gaLtHRFPQuAXrlQ5toBaA3vMCvQ0q5AagrwslHcAA7T0xRCM86KHlbtGsBnXIDi1kmKdsYa3btEOfJseB0v+zJR8RYbSM6yTZ2fc/REfxtKUBsko09zUHIEADa9atW9IkyTB/igvbwQg8+TH5G9dvm1uCAcW1h2erBn84Q2tVjpijKuaWqx0hGPMT6/aGHRfZVfgr5uYWHTDdERqunCfYHZtpmRHO3nx7N2liELyheaQV+tne/rL3sT6k3NyM6jH7WJftYN5Jzgpt4wbkm3dEC3d/Czto1R9Te0fQYVfENnPF6F1H/WAjJjzXMfGaD2kelc8ILkrhOhwQBB4yX2cnxTxV/h7XhsNki8wptB40rvD+Tt/GQG6rINA235C5A82SzQsqzXAKn7+qEI0INbJzQA0pie4bYBeNDVrMoD/+kluE+JiZ/JNIMfeOQlICoL7foAAAAASUVORK5CYII=") no-repeat;
+    background-size: cover
+}
+
+.team-card .contact-github {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAARVBMVEUAAAC3d7S3eLS3d7S3eLS3eLS3d7S3d7S2e7m3eLW3eLO3d7S3d7O3d7S3eLS2eLS4d7W3eLS3d7O3d7S3d7S3eLO3eLQmL7ybAAAAFnRSTlMA3Fyj+PA5/QQL5ksVhtEhLb2TcbHHPg42ugAAAnlJREFUeF6lld2SpCAMRoUkhB9BAc37P+oK2NY4w25t1eQmF5z++hAFl9+UdaZC8sjoz6I3Z/+BriYqFhFGxNYp6839BV4DkAj5dB4AcJzKo3Cq+yzf7tELqhzDNpbdruEk5qzXH7ALGVnBe8XuNZP4uNlvFjoxHT9TbNsJwtvG6SS+TA2dzsjH/jUhpPZ/E7bHHxf+ZXHP7GOzmJfJiMU90hGptOSJie14YtKPhx9ithzv6a6hHMY2gkTdLiuI0g3aE1OK265rLLGG3YAirk3BFeR4axFDlw5KREgpT628UigipS9tXqiH2yhKLzf9s8owiCy1dac4j3mYNKHvWW0oqTNMZXllz2ibmdskqvgh4g6c0BTGlOpQAUl7p7WSWcGtyQJXS3K6Thea0mpkOZbzap7zMDtkWmyWXl781RCPW1vmZYa4ErwaI/xXdhL+kr0ATmka3iP78V4iTelz67Cl7n1KGjMKaSryeZgsLbWIGmYOZuHq3mRgKVfT4utzRn7Avo7opbDoq22E4AYegPjFYvrATgmtrWdJl4rRxi17hfT8AH0u4YYXjdJHZ7VQtIuBrN1it6Bh4L5oM9geyRzGbhOfZnEmp2D7U+p0j3hK0+dtcpUprovVKrf9m3syfIzkO5DDc530Y7welCBC+nif++MBKH0Sw9zzGdrZYSRk+dDmsx5pvLfP9YO5qQMx03faVs/9BD1ewBdu7brtW8U37aJnrO51UR+MSXe18KY3oAG/cWQqm/1GO51Q6AUPmUKC7TPwmCTjQiYWFdzsWlcsjOnZJXuFLNw+DLPaIonw+5idI3jO1/SVpuPFTmqvcPZvcS56XX5VfwCYq0G3935jjwAAAABJRU5ErkJggg==") no-repeat;
+    background-size: cover
+}

@@ -1,303 +1,42 @@
+---
+sitemap: false
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">IIT HeartBeat</title>
+<title type="text">{{ site.title }}</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://iithbt.in/feed.xml" />
-<link rel="alternate" type="text/html" href="http://iithbt.in" />
-<updated>2016-09-17T23:30:31+05:30</updated>
-<id>http://iithbt.in/</id>
+<link rel="self" type="application/atom+xml" href="{{ site.url }}/feed.xml" />
+<link rel="alternate" type="text/html" href="{{ site.url }}" />
+<updated>{{ site.time | date_to_xmlschema }}</updated>
+<id>{{ site.url }}/</id>
 <author>
-  <name>IIT HeartBeat</name>
-  <uri>http://iithbt.in/</uri>
-  <email>iithbt@gmail.com</email>
+  <name>{{ site.owner.name }}</name>
+  <uri>{{ site.url }}/</uri>
+  {% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
 </author>
-
-
+{% for post in site.posts limit:20 %}
+{% if post.author %}
+  {% assign author = site.data.authors[post.author] %}
+{% else %}
+  {% assign author = site.owner %}
+{% endif %}
 <entry>
-  <title type="html"><![CDATA[Chit Chat with Arpit Agrawal]]></title>
-  <link rel="alternate" type="text/html" href="http://iithbt.in/articles/Chit-Chat-With-Arpit/" />
-  <id>http://iithbt.in/articles/Chit-Chat-With-Arpit</id>
-  <published>2016-09-17T22:40:00+05:30</published>
-  <updated>2016-09-17T22:40:00+05:30</updated>
+  <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+  <link rel="alternate" type="text/html" href="{{ site.url }}{{ post.url }}" />
+  <id>{{ site.url }}{{ post.id }}</id>
+  {% if post.modified %}<updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>
+  <published>{{ post.date | date_to_xmlschema }}</published>
+  {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
+  <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
   <author>
-    <name>Yash Kant</name>
-    <uri>http://iithbt.in</uri>
-    <email>ysh.kant@gmail.com</email>
+    <name>{{ author.name }}</name>
+    <uri>{{ site.url }}</uri>
+    {% if author.email %}<email>{{ author.email }}</email>{% endif %}
   </author>
   <content type="html">
-    &lt;p&gt;Question 1. Hi Arpit, thank you for agreeing to this interview. Tell us a little about yourself and your background?&lt;/p&gt;
-
-&lt;p&gt;Hi, I am Arpit Agrawal. I am a story teller; this is what I love to be called. I can’t say it to masses, so I write my heart out.&lt;/p&gt;
-
-&lt;p&gt;I completed Engineering in Mechanical from RCET Bhilai, then worked as a Software Engineer with Accenture, Pune for 2.5 years and then quit my job for my own venture.&lt;/p&gt;
-
-&lt;p&gt;After all, money is not all you need in life, sometimes you need more money.&lt;/p&gt;
-
-&lt;p&gt;Question 2. Out of all those options that you’ve had at your disposal, how did you end up picking the pen for career?&lt;/p&gt;
-
-&lt;p&gt;I accidently turned out to be a writer.&lt;/p&gt;
-
-&lt;p&gt;When I was in college, out of the blue, I wrote a small piece for my college-magazine. It was cherished by many. ‘I must do big’ I thought and approached an English Newspaper. They willingly published my articles and I got emails of readers from all over the State. I looked into the bigger picture and approached a National Magazine, they loved my stories too and it gave me a monthly readership of almost 4,00,000 readers across the Nation.&lt;/p&gt;
-
-&lt;p&gt;‘I must do big’ I thought again and hence, I got published through my debut novel in the year 2013 called ‘Dear life, get well soon…’&lt;/p&gt;
-
-&lt;p&gt;Isn’t it a nature’s clue for me to write further? And hence I wrote my second book ‘Take my heart,forever’.&lt;/p&gt;
-
-&lt;p&gt;Question 3. It seems as though your career graph reach out from the typical shades of a software engineer to a writer, how will you explain this? :)&lt;/p&gt;
-
-&lt;p&gt;In my first year of working as a Software Engineer, I realized that I am not one of 2.75 Million software engineers in our country.&lt;/p&gt;
-
-&lt;p&gt;The primary goal of my life was, if someone searches my name in google, it should show the result. And yes, it shows if you search about my books.&lt;/p&gt;
-
-&lt;p&gt;Question 4. How were you able to keep alive the wishes of an author inside you until you left your job for the same.&lt;/p&gt;
-
-&lt;p&gt;I continued to write even when I was in office. I wrote few chapters of my first book in my office computer (don’t tell to my ex-boss).&lt;/p&gt;
-
-&lt;p&gt;If there is something you love with all your heart, you can easily keep the spark alive inside you.&lt;/p&gt;
-
-&lt;p&gt;Question 5. Your writing genre for the debut novel “Dear Life, Get Well Soon” seemed to be sarcastic yet emotionally appealing, will there be any shift expected in the 2nd novel?What draws you to this genre?&lt;/p&gt;
-
-&lt;p&gt;‘Dear life, get well soon’ is basically a sarcastic and humorous read; on the contrary ‘Take my heart, forever’ is a revolutionary tale with a romance genre.&lt;/p&gt;
-
-&lt;p&gt;I got the concept of ‘TMHF’ in my mind even before I started writing my first book, but this is a mature topic and I wanted my debut to be a light and comic read, that’s why I wrote ‘DLGWS.’&lt;/p&gt;
-
-&lt;p&gt;Question 6. Which writers inspire you? Whose work do you admire?&lt;/p&gt;
-
-&lt;p&gt;I like Chetan Bhagat for his simplicity in writing. He build a platform for numerous authors in India.&lt;/p&gt;
-
-&lt;p&gt;Question 7.What authors do you like to read? What book or books have had a strong influence on you or your writing?&lt;/p&gt;
-
-&lt;p&gt;I read many Indian and foreign authors.From paulo Coelho to Shidney Sheldon, and from Chetan Bhagat to Durjoy Dutta, I like to read every author.&lt;/p&gt;
-
-&lt;p&gt;If I ever get paid for reading, I will shut my door and continue reading forever and ever…&lt;/p&gt;
-
-&lt;p&gt;Question 8. What you feel is hardest about writing? Do you ever get writer’s block? If yes then how do you deal with it ? Does support from family and friends matters ?&lt;/p&gt;
-
-&lt;p&gt;The hardest about writing is to get stress-free time. Even if you get time but you are stressed, you can never write.&lt;/p&gt;
-
-&lt;p&gt;When I newly joined my job, I didn’t write even a page for almost a year. It wasn’t easy for me to cope time for writing. But as I aged I started again and then never stopped it again.&lt;/p&gt;
-
-&lt;p&gt;Question 9. What were some sweet and bitter experiences of your life that motivates the artist inside you to continue on this path?&lt;/p&gt;
-
-&lt;p&gt;I had many sweet moments which inspired me to write further.&lt;/p&gt;
-
-&lt;p&gt;Once I wrote an article with the message that we should not elope with our lovers, we should peacefully convince our parents for marriage instead.
-I got email from a girl saying, she was planning to elope with her boyfriend, but she changed her mind after reading my article published in a Newspaper.&lt;/p&gt;
-
-&lt;p&gt;Once a school student wrote me how he dropped his plan of suicide after reading my article on suicide attempts of students who flunk in examinations.&lt;/p&gt;
-
-&lt;p&gt;These incidents stimulate me. I am blessed that I am able to do good to the society with my pen.&lt;/p&gt;
-
-&lt;p&gt;Question 10. Tell us some more about your book. How long on average does it take you to write a book?&lt;/p&gt;
-
-&lt;p&gt;I need an average of two years to write a book.&lt;/p&gt;
-
-&lt;p&gt;With this book I want to share a unique idea that, if the court of law announces capital punishment to any terrorist or a murderer, they shouldn’t just be hanged till death. It is a loss of body organs. Court should order them to donate all their functional organs to needy patients in the hospital. It may save their lives. It is like, “You kill people, now you save people…” this is the only justice to humanity according to me.&lt;/p&gt;
-
-&lt;p&gt;Question 11. What advice would you give to aspiring writers?&lt;/p&gt;
-
-&lt;p&gt;I would advise to write original stuff, write what you actually like to read.&lt;/p&gt;
-
-&lt;p&gt;Like whenever I write anything, no matter how entertaining it is, there is always a message hidden in it for the society.&lt;/p&gt;
-
-&lt;p&gt;This is I think writing should be, it should entertain you and at the same time make you a better person.&lt;/p&gt;
-
-&lt;p&gt;Question 13. Last question/s Rapid fire round :P :&lt;/p&gt;
-
-&lt;p&gt;How do you relax?
-By writing. Trust me…&lt;/p&gt;
-
-&lt;p&gt;What is your favourite motivational phrase?&lt;/p&gt;
-
-&lt;p&gt;“Have the courage to follow your heart and intuition. They somehow know what you truly want to become.” By Steve Jobs.&lt;/p&gt;
-
-&lt;p&gt;What is your favourite book and why?
-‘Two States’ because of its humour.&lt;/p&gt;
-
-&lt;p&gt;Where can you see yourself in 5 years time?
-‘Giving another interview to your juniors for this same magazine, for my fourth or fifth	 book.’&lt;/p&gt;
-
-&lt;p&gt;What is your favourite movie and why?
-‘Jab we met’ because I believe we should live life like ‘Geet’ as it shows in the movie.She is filled with vigor and liveliness.&lt;/p&gt;
-
-&lt;p&gt;What advice would you give to your younger self?&lt;/p&gt;
-
-&lt;p&gt;Enjoy the moment, don’t worry too much about the future, I am doing well here.&lt;/p&gt;
-
-&lt;p&gt;Which famous person, living or dead would you like to meet and why?
-I would love to meet you ‘Yash Kant’ for asking me so sensible questions.&lt;/p&gt;
-
-&lt;p&gt;If you could have been the original author of any book, what would it have been and why?&lt;/p&gt;
-
-&lt;p&gt;I wish if I were the author of ‘Harry Potter’. I would have not changed anything in the book, but it would have changed my life as I get huge royalty cheques.&lt;/p&gt;
-
-&lt;p&gt;Who edited your book and how did you select him/her?&lt;/p&gt;
-
-&lt;p&gt;It is moreover publisher’s part of work.&lt;/p&gt;
-
-&lt;p&gt;Who designed your book cover/s?
-It is also publisher’s part of work.&lt;/p&gt;
-
-&lt;p&gt;Why do you write ?
-Because deep down in my heart I always knew that if I will write, one day, a magazine from IIT will take my interview.&lt;/p&gt;
-
-&lt;p&gt;Do you write a draft on paper or at a keyboard (typewriter or computer)?Ballpoint, uniball or fountain pen?&lt;/p&gt;
-
-&lt;p&gt;My handwriting is awful, but I can type 70 words a minute, so I always type in a computer.&lt;/p&gt;
-
-&lt;p&gt;Aren’t writers supposed to be solitary?&lt;/p&gt;
-
-&lt;p&gt;Of course not. Had it be true, from where all those romantic ideas come from?&lt;/p&gt;
-
-&lt;p&gt;How was your academic performance at school?
-Above average. But not that good to make it to an IIT, like you guys.&lt;/p&gt;
-
-&lt;p&gt;Question 14. Tell us the blurb of your book?&lt;/p&gt;
-
-&lt;p&gt;“Meet Siddhartha, a good lawyer but a bad human.
-Meet Rahul, a good human but a bad doctor.
-And meet Shuchi, a good human and an exceptionally well doctor.
-Shuchi tries to make a good human out of Siddhartha and a good doctor out of Rahul, but a bomb blast transforms their lives.
-Read this revolutionary tale to know how Siddhartha will get a unique PIL passed in the courtroom and Rahul will perform a life changing surgery, to save the girl they love.”&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://iithbt.in/articles/Chit-Chat-With-Arpit/&quot;&gt;Chit Chat with Arpit Agrawal&lt;/a&gt; was originally published by IIT HeartBeat at &lt;a href=&quot;http://iithbt.in&quot;&gt;IIT HeartBeat&lt;/a&gt; on September 17, 2016.&lt;/p&gt;
+    {{ post.content | xml_escape }}
+    {% include feed-footer.html %}
   </content>
 </entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Ere ,break of the day]]></title>
-  <link rel="alternate" type="text/html" href="http://iithbt.in/articles/ere-break-of-the-day/" />
-  <id>http://iithbt.in/articles/ere-break-of-the-day</id>
-  <published>2016-08-30T22:40:00+05:30</published>
-  <updated>2016-08-30T22:40:00+05:30</updated>
-  <author>
-    <name>Yash Kant</name>
-    <uri>http://iithbt.in</uri>
-    <email>ysh.kant@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;To the blades of green grass,
-where my little feet once did tread,
-to the river flowing over,
-a thousand and one year old bed,
-I’ll return ere break of day,
-on the last day of May.&lt;/p&gt;
-
-&lt;p&gt;With the people that I once called my friend,
-and with the people that I still do,
-and even with those whom I truly dread,
-I’ll go on a tour ere break of day,
-to see some long forgotten bay.&lt;/p&gt;
-
-&lt;p&gt;My fun which was ended in mid-stride,
-my peace that was extinguished so abruptly,
-my life which was forced to hide,
-will come back to me ere break of day,
-and I’ll once again be cheerful and gay.&lt;/p&gt;
-
-&lt;p&gt;As for you my dear, I will realize,
-all our dreams that we dreamed all day and night,
-and all our innocent thoughts with no vice,
-we’ll think again ere break of day,
-by the light of the moon’s last ray.&lt;/p&gt;
-
-&lt;p&gt;But that day is nowhere in sight,
-so I continue my long and weary fight,
-and tread along this tiring road,
-without any sign or direction board,
-to my supposed paradise.&lt;/p&gt;
-
-&lt;p&gt;What will happen by the end of May,
-there is nothing definite to say,
-but of one thing I am absolutely sure,
-that I’ll be whole and my joy will be pure,
-on the last day of May,
-when I’ll return ere break of day.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;http://iithbt.in/articles/ere-break-of-the-day/&quot;&gt;Ere ,break of the day&lt;/a&gt; was originally published by IIT HeartBeat at &lt;a href=&quot;http://iithbt.in&quot;&gt;IIT HeartBeat&lt;/a&gt; on August 30, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Arab Springs]]></title>
-  <link rel="alternate" type="text/html" href="http://iithbt.in/articles/arab-springs/" />
-  <id>http://iithbt.in/articles/arab-springs</id>
-  <published>2016-08-29T22:40:00+05:30</published>
-  <updated>2016-08-29T22:40:00+05:30</updated>
-  <author>
-    <name>Shubham Pallod</name>
-    <uri>http://iithbt.in</uri>
-    <email>pallodshubhamm@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;From hundreds of years, common people in Arab countries were struggling with the problems like political corruption, inflation, unemployment, poverty, human right violations. In the year 2010, the anger against the Government exploded in Tunisia. Arab Spring was a revolutionary wave of demonstrations and protests, riots, and civil wars in the middle-east countries. It then spread like epidemic in the neighbouring countries which were in similar condition.&lt;/p&gt;
-
-&lt;p&gt;Starting from Tunisia, this wave spread to almost all other neighbouring countries. This was first triggered by self-immolation of activist Mohamed Bouazizi in the Tunisian city Sidi Bouzid. Protests started in whole country against Government. Finally, President Zine El Abidine Ben Ali was exiled by demonstrators and he fled to Saudi Arabia. Egypt, which was facing the similar problems as Tunisia, was inspired by the uprising in Tunisia. Protests started against the government. They were strongly suppressed by President Hosni Mubarak using his power. But protests continued to increase. Finally President resigned and transferred his powers to Armed Forces. At Tahrir Square, Essam Sharaf was appointed as Prime Minister of Egypt.&lt;/p&gt;
-
-&lt;p&gt;Demonstrations were performed in a similar way in countries like Libya, Syria, Lebanon, Yemen, and Saudi Arabia. In Libya, protests became more violent as Government tried to oppose protestors using army. After long battles, and with the help of other countries, activists succeeded in overthrowing the Government. President Muammar Gaddafi was brutally killed by opposite forces. In other countries also, Government was ousted and new leaders were chosen by people.&lt;/p&gt;
-
-&lt;p&gt;New concepts of riots were discovered in these civil wars. The special feature of the Arab Spring was the use of internet services to spread the patriotic wave among people. Protestors used social media to spread their messages. Due to this, Egyptian Government restricted the internet access across the entire nation during civil war.&lt;/p&gt;
-
-&lt;p&gt;Though, Arab Springs succeeded in conveying positive message to the rest of the world, it is so disheartening that the major aims of this revolution were widely disputed.  It has also disappointed those hoping that the removal of corrupt rulers would translate into an instant improvement in living standards because financial damage caused due to war to these already poor countries pushed them into serious trouble of poverty and inflation. The attitude of the government towards this revolution was also shocking. Instead of listening to the demands of people and coming up with a solution, they tried to smash the crowd by using their military powers eventually creating war like conditions.&lt;/p&gt;
-
-&lt;p&gt;About 170,000 lost their lives in this civil war. Conditions are not normal in these countries till today.&lt;/p&gt;
-
-&lt;p&gt;This movement has disproved the passivity of Arabs towards political issues. It gave a message to the world, that common people will not tolerate any form of injustice against them. We can define Arab Spring as a revolutionary movement done for long term achievements and whose final outcomes are yet to be known.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://iithbt.in/articles/arab-springs/&quot;&gt;Arab Springs&lt;/a&gt; was originally published by IIT HeartBeat at &lt;a href=&quot;http://iithbt.in&quot;&gt;IIT HeartBeat&lt;/a&gt; on August 29, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Let’s Discuss Future]]></title>
-  <link rel="alternate" type="text/html" href="http://iithbt.in/articles/future-talk/" />
-  <id>http://iithbt.in/articles/future-talk</id>
-  <published>2016-08-28T22:40:00+05:30</published>
-  <updated>2016-08-28T22:40:00+05:30</updated>
-  <author>
-    <name>Yash Kant</name>
-    <uri>http://iithbt.in</uri>
-    <email>ysh.kant@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;I would like to start with a story I came across few days back about a possible future event, or perhaps my imagination. It’s about year 2144, what’s the need of being so precise about the date in our hazy future? Not at all! But I required one at least. Being taught to always have faith in the divine force that unites all beings, I wanted one character in the story to reflect this divine force, let’s call him the Great Artist. At the beginning of life the Great Artist as I said created all life forms on earth differentiated and varied with possibilities. But amongst all his makings the only masterpiece he had was man. Man surprised him when he suddenly got up on two limbs and started to use his extra limbs to eat, cook, and create shelter for himself. Overjoyed with the feats of his finest creation and its abilities the Great Artist wished to see more.&lt;/p&gt;
-
-&lt;p&gt;Although with modest stems and a humble start each one this species had a zest to learn and progress. They no more reflected the untamed behaviour of the wild, but instead lived in formations and groups.They developed compassion for their fellows and passed their knowledge as legacies to their children.Not very long after this the Great Artist noticed that there was one thing man couldn’t control himself for and that was his vigour for advancing ahead in life. No matter how much the Great Artist provided him he wasn’t satisfied , rather made himself feel granted towards them owing to his intelligence. Soon the man found out that he was still imperfect with his wishes and his creator didn’t gave him abilities he wished to possess, thus came the machines. Beginning from the very modest bullock cart wheels they progressed and soon became an integrated part man’s life. Machines gave rise to industrial revolution and soon became an inseparable part of human’s life, nearing to 21st century man had inherited enough complex and developed machines from his ancestors whom in turn from their own, that the continuous interaction between him and machines no longer seemed alien to him. Uproar of these artificial machines didn’t please the Great Artist, his mind was in turmoil, he probably didn’t like the prayers emailed to him or online enchantings played during poojas. Over the period of time it occurred to him that a change was required things had already reached the bitter end. Man, although calling him an intelligent being, had made the stupidest of mistakes that threatened the survival of not only his but the entire existence of all living beings on the planet. Overpopulation created scarcity of resources and the economic crisis led towards highly biased distribution of these resources, a recent survey I stumbled upon displayed this on more statistical terms that the richest 10% of the world’s population earned 9.6 times the total income of poorest 10%. But we are in 2144 right! Things have more drastic consequences by now and the Great Artist deprived of all ways finally took matter into his hands to stop his best creation annhilating all life forms on the planet. With the most regretting emotions and tearful eyes, with compassion turned into worries and then into anger he finally decided to wage against humans and their artificiality which promised futile happy endings and various environmental rehabilitation techniques. Enough of the warnings he said, if they were wise they would have stopped , and now he began eradication of this so called (self-proclaimed) intelligent species all alike, he killed all the renowned and destitute alike. No differences did he notice in their deaths all starved, all drowned, all wanted to live.&lt;/p&gt;
-
-&lt;p&gt;But the question remained was why did he create us at the first place now if he didn’t wanted us to grow, well said he might say but at the end creators when turned devilish by coercing won’t stop to answer you. Well perhaps this curiosity in humans and their ability to question existent things and the way they were or their willingness to conclude everything with logic resulted in their extinction by the hands of those who created them. 
-Now let the peace prevail.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://iithbt.in/articles/future-talk/&quot;&gt;Let’s Discuss Future&lt;/a&gt; was originally published by IIT HeartBeat at &lt;a href=&quot;http://iithbt.in&quot;&gt;IIT HeartBeat&lt;/a&gt; on August 28, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Welcome]]></title>
-  <link rel="alternate" type="text/html" href="http://iithbt.in/articles/welcome/" />
-  <id>http://iithbt.in/articles/welcome</id>
-  <published>2016-08-06T22:40:00+05:30</published>
-  <updated>2016-08-06T22:40:00+05:30</updated>
-  <author>
-    <name>Devashish Jog</name>
-    <uri>http://iithbt.in</uri>
-    <email>devashishjog@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;A heartiest welcome to all the people, who are fond of reading, to a virtual world of some very interesting articles and blogs.&lt;/p&gt;
-
-&lt;p&gt;IIT Heartbeat is proud to present before you its new venture as it launches its website, where we will be posting blogs related to the topics which easily connects with the youth of our society.&lt;/p&gt;
-
-&lt;p&gt;Hurry Up!!&lt;/p&gt;
-
-&lt;p&gt;Explore the site and enjoy the blogs!!&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://iithbt.in/articles/welcome/&quot;&gt;Welcome&lt;/a&gt; was originally published by IIT HeartBeat at &lt;a href=&quot;http://iithbt.in&quot;&gt;IIT HeartBeat&lt;/a&gt; on August 06, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
+{% endfor %}
 </feed>
