@@ -94,82 +94,70 @@ Like whenever I write anything, no matter how entertaining it is, there is alway
 This is I think writing should be, it should entertain you and at the same time make you a better person.
 
 
-###### Question 12. Tell us the blurb of your book?
+###### Question 12. Last question/s Rapid fire round :P :
 
-Answer: "Meet Siddhartha, a good lawyer but a bad human.
-Meet Rahul, a good human but a bad doctor.
-And meet Shuchi, a good human and an exceptionally well doctor.
-Shuchi tries to make a good human out of Siddhartha and a good doctor out of Rahul, but a bomb blast transforms their lives.
-Read this revolutionary tale to know how Siddhartha will get a unique PIL passed in the courtroom and Rahul will perform a life changing surgery, to save the girl they love.”
+_How do you relax?_
 
-###### Question 13. Last question/s Rapid fire round :P :
-
-How do you relax?
 By writing. Trust me…
 
+_What is your favourite motivational phrase?_
 
-What is your favourite motivational phrase?
+> "Have the courage to follow your heart and intuition. They somehow know what you truly want to become." 
+	-By Steve Jobs.
 
-"Have the courage to follow your heart and intuition. They somehow know what you truly want to become." By Steve Jobs.
+_What is your favourite book and why?_
 
-What is your favourite book and why?
-‘Two States’ because of its humour.
+_‘Two States’_ because of its humour.
 
+_Where do you see yourself in 5 years time?_
 
-Where can you see yourself in 5 years time?
-‘Giving another interview to your juniors for this same magazine, for my fourth or fifth	 book.’
+‘Giving another interview to your juniors for this same magazine, for my fourth or fifth book.’
 
+_What is your favourite movie and why?_
 
-What is your favourite movie and why?
-‘Jab we met’ because I believe we should live life like ‘Geet’ as it shows in the movie.She is filled with vigor and liveliness.
+_‘Jab we met’_ because I believe we should live life like ‘Geet’ as it shows in the movie.She is filled with vigor and liveliness.
 
-
-What advice would you give to your younger self?
+_What advice would you give to your younger self?_
 
 Enjoy the moment, don’t worry too much about the future, I am doing well here.
 
+_Which famous person, living or dead would you like to meet and why?_
 
-Which famous person, living or dead would you like to meet and why?
 I would love to meet you ‘Yash Kant’ for asking me so sensible questions.
 
+_If you could have been the original author of any book, what would it have been and why?_
 
-If you could have been the original author of any book, what would it have been and why?
+I wish if I were the author of _‘Harry Potter’_. I would have not changed anything in the book, but it would have changed my life as I get huge royalty cheques.
 
-I wish if I were the author of ‘Harry Potter’. I would have not changed anything in the book, but it would have changed my life as I get huge royalty cheques.
-
-
-Who edited your book and how did you select him/her?
+_Who edited your book and how did you select him/her?_
 
 It is moreover publisher’s part of work.
 
+_Who designed your book covers?_
 
-Who designed your book cover/s?
 It is also publisher’s part of work.
 
+_Why do you write ?_
 
-Why do you write ?
 Because deep down in my heart I always knew that if I will write, one day, a magazine from IIT will take my interview.
 
-
-Do you write a draft on paper or at a keyboard (typewriter or computer)?Ballpoint, uniball or fountain pen?
+_Do you write a draft on paper or at a keyboard (typewriter or computer)?Ballpoint, uniball or fountain pen?_
 
 My handwriting is awful, but I can type 70 words a minute, so I always type in a computer.
 
-
-Aren’t writers supposed to be solitary?
+_Aren’t writers supposed to be solitary?_
 
 Of course not. Had it be true, from where all those romantic ideas come from?
 
+_How was your academic performance at school?_
 
-How was your academic performance at school?
 Above average. But not that good to make it to an IIT, like you guys.
 
-###### Question 14. Tell us the blurb of your book and how to order it?
+###### Question 13. Tell us the blurb of your book and how to order it?
 
 Answer: I just love it when someone ask me, ‘How to order’. Let me share the link.
 
 Blurb:
-
 *"Meet Siddhartha, a good lawyer but a bad human.
 Meet Rahul, a good human but a bad doctor.
 And meet Shuchi, a good human and an exceptionally well doctor.
@@ -178,12 +166,11 @@ Read this revolutionary tale to know how Siddhartha will get a unique PIL passed
 
 
 ###### Order link 
-<http://tinyurl.com/htjy57t> 
-  *(Free shipping)*
+<a href="http://tinyurl.com/htjy57t" target="_blank">http://tinyurl.com/htjy57t</a> <span style="font-size:10px"><i>(Free shipping)</i></span>
 
 
 ###### Amazon order link 
-<http://tinyurl.com/hwsme2o>
+<a href="http://tinyurl.com/hwsme2o" target="_blank">http://tinyurl.com/hwsme2o</a>
 
 
 
