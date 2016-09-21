@@ -6,7 +6,7 @@ excerpt: Jammu and kashmir in Jeopardy
 author: tanmay
 image: 
   feature: kashmir.jpg
-date: 2016-09-21T23:41:06+05:30
+date: 2016-09-21T23:41:00+05:30
 ---
 
 
