@@ -3,7 +3,7 @@ layout: post
 title: "Ere ,break of the day"
 categories: articles
 excerpt: A refreshing poem
-author: yash
+author: raunaq
 image: 
   feature: ere.jpg
 date: 2016-08-30T22:40:00+05:30
