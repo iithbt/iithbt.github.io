@@ -48,6 +48,6 @@ Please don’t confuse this letter as an adrenaline emotional outburst. Take it 
 All my luck to you and your children.
 
 
-__Love always__
-__Your Ailing Mother__
+__Love always__<br/>
+__Your Ailing Mother__<br/>
 __Earth !__
