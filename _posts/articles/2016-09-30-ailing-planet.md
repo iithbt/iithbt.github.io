@@ -2,7 +2,7 @@
 layout: post
 title: "Letter from an Ailing Planet"
 categories: articles
-excerpt: Did you ever receive a letter from your mother that truly establishes that you have abandoned her n the strands of agony whose knots were tied by you? Well yes, you did because it was the letter from our Mother Earth, our creator how is right now in pain.
+excerpt: Did you ever receive a letter from your mother that truly establishes that you have abandoned her in the strands of agony whose knots were tied by you? Well yes, you did because it was the letter from our Mother Earth, our creator who is right now in pain.
 author: ankit
 image: 
   feature: ailingearth.jpg
