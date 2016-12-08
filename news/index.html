@@ -6,6 +6,8 @@ search_omit: true
 
 <link rel="stylesheet" type="text/css" href="../assets/css/post_tiles.css" />
 <script src="../assets/js/jquery.waterfall.js"></script>
+<script src="../assets/js/jquery.infinitescroll.min.js"></script>
+<script src="../assets/js/news.js"></script>
 <script src="https://npmcdn.com/imagesloaded@4.1.1/imagesloaded.pkgd.min.js"></script>
 <script src="https://www.jsviews.com/download/jsrender.min.js"></script>
 
@@ -30,32 +32,6 @@ search_omit: true
     	</div>
     </article>
 {% endraw %}
-</script>
-<script>
-	function loadNews() {
-
-		$.getJSON("https://iithbt.herokuapp.com/news/api/", function(result){
-        	$.each(result, function(i, field){
-        		var tmpl = $.templates("#newsArticleTemplate");
-        		var post = tmpl.render({post : field});
-        		$(".waterfall").append(post);
-        	});
-        	// registerImageLoadingCallbacks();
-    	});
-	}
-	function registerImageLoadingCallbacks() {
-		$('.post-image').each(function() {
-			$(this).imagesLoaded().done( function( instance ) {
-				console.log(instance);
-    			$('.waterfall').waterfall({ 
-    				colMinWidth: 300,
-    				autoresize: true
-  				});
-    		});
-    	});
-	}
-	
-	$(document).ready(function() { loadNews(); });
 </script>
 
 <div class="waterfall" data-col-min-width="300" data-autoresize="true"></div>
