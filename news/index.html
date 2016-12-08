@@ -13,16 +13,12 @@ search_omit: true
 
 <script id="newsArticleTemplate" type="text/x-jsrender">
 {% raw %}
-    <article class="post-box">
-    {{if post.img_src}}
-    	<div class="image-container">
-    		<a href="{{:post.url}}" class="link">
-    			<img src="{{:post.img_src}}" alt="{{:post.title}}" class="post-image" />
-    		</a>
-    	</div>
-    {{/if}}
+    <article class="post-box">    
     	<div class="post-container">
-    		<a href="{{:post.url}}" class="link">
+    		<a href="{{:post.url}}" target="_blank" class="link">
+                {{if post.img_src}}
+                    <img style="float: left; margin: 10px 15px 0px 10px;" src="{{:post.img_src}}" alt="{{:post.title}}" class="post-image" />
+                {{/if}}
     			<h2 class="title">{{:post.title}}</h2>
     		</a>
     		<p class="subline">{{:post.source}} - <time datetime="{{:post.pub_date}}">{{:post.pub_date}}</time></p>
