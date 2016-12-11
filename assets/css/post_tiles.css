@@ -20,9 +20,10 @@
 .post-container {
     padding:10px;
 }
-.post-container h2.title{
+.post-container h3.title{
     margin: 0;
-    font-family: 'Mirza', cursive;
+    /*font-family: 'Mirza', cursive;*/
+    font-family: 'Crimson Text', serif;
 }
 .post-container p.subline{
     margin-top: 0px;

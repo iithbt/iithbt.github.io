@@ -89,7 +89,7 @@ search_omit: true
     </div>
     <div class="post-container">
     	<a href="{{ site.url }}{{ post.url }}" class="link">
-        	<h2 class="title">{{ post.title }}</h2>
+        	<h3 class="title">{{ post.title }}</h3>
         </a>
         <p class="subline">By {{ site.data.authors[post.author].name }} on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
         <p class="excerpt">
