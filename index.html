@@ -50,7 +50,7 @@ search_omit: true
     	clearitems();
 	}
 
-	$(window).load(function()
+	$(window).on('load', function()
 	{
 		$(".overlay-link").add(".text-link").click(function(){
     		openBookBlock($(this).attr('id'));
