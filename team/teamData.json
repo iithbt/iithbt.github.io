@@ -197,7 +197,96 @@
                   "img_alternate": "Janhavi.jpg",
                   "description": "",
                   "facebook": "janhaviprakashpatil"
+                },
+                {
+                  "name": "Ankit",
+                  "position": "Web Developer ",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "ankitkataria28"
+                },
+                {
+                  "name": "Deepesh",
+                  "position": "Web Developer ",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "deepshpathak"
+                },
+                {
+                  "name": "Ayush",
+                  "position": "Web Developer ",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "ayushjainaj20"
+                },
+                {
+                  "name": "Shaddy",
+                  "position": "Web Developer ",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "shaddygarg"
+                },
+                {
+                  "name": "Anjali",
+                  "position": "Web Developer ",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "anjali.dhanuka.1"
+                },
+                {
+                  "name": "Kriti",
+                  "position": "Web Developer ",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "kritisingh1.ks"
+                },
+                {
+                  "name": "Rohan",
+                  "position": "Design Team",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "rohan.cool.522"
+                },
+                {
+                  "name": "Kaustubh",
+                  "position": "Design Team",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "kaustubh.nayyar"
+                },
+                {
+                  "name": "Vakul",
+                  "position": "Finance Team",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "vakul.singh.1"
+                },
+                {
+                  "name": "Anukarsh",
+                  "position": "Finance Team",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "anukarsh.khandelwal"
+                },
+                {
+                  "name": "Shreyansh",
+                  "position": "Finance Team",
+                  "img_normal": "Janhavi.jpg",
+                  "img_alternate": "Janhavi.jpg",
+                  "description": "",
+                  "facebook": "16.shrey"
                 }
+
               ]
   },
   {
