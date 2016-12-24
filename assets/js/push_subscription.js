@@ -56,8 +56,10 @@
   function sendTokenToServer(currentToken) {
     if (!isTokenSentToServer()) {
       console.log('Sending token to server...');
-      // TODO(developer): Send the current token to your server.
-      setTokenSentToServer(true);
+      $.get("https://iithbt.herokuapp.com/news/notif_reg?token="+currentToken, function(res){
+        console.log(res);
+        setTokenSentToServer(true);
+      });
     } else {
       console.log('Token already sent to server so won\'t send it again ' +
         'unless it changes');
