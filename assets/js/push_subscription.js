@@ -1,99 +1,116 @@
-'use strict';
 
-const applicationServerPublicKey = 'BJPMaDrbRiUzH8IeMvRMn7CcxFMIQzTEB1j62Kn' +
-  'gB5irgMhB9TPgcmMjwB7t1aRkUKDwzz9MMH3ASEKLKX_mqjk';
+  // Initialize Firebase
+  var config = {
+    messagingSenderId: "1036616839013",
+  };
+  firebase.initializeApp(config);
 
-let isSubscribed = false;
-let swRegistration = null;
+  const messaging = firebase.messaging();
 
-function urlB64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/\-/g, '+')
-    .replace(/_/g, '/');
-
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
-
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
-}
-
-function updateSubscriptionOnServer(subscription) {
-  // TODO: Send subscription to application server
-
-  if (subscription) {
-    console.log(JSON.stringify(subscription));
-  } else {
-  }
-}
-
-function subscribeUser() {
-  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
-  swRegistration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: applicationServerKey
-  })
-  .then(function(subscription) {
-    console.log('User is subscribed:', subscription);
-    updateSubscriptionOnServer(subscription);
-    isSubscribed = true;
-  })
-  .catch(function(err) {
-    console.log('Failed to subscribe the user: ', err);
+  messaging.onTokenRefresh(function() {
+    messaging.getToken()
+    .then(function(refreshedToken) {
+      console.log('Token refreshed.');
+      // Indicate that the new Instance ID token has not yet been sent to the
+      // app server.
+      setTokenSentToServer(false);
+      // Send Instance ID token to app server.
+      sendTokenToServer(refreshedToken);
+    })
+    .catch(function(err) {
+      console.log('Unable to retrieve refreshed token ', err);
+    });
   });
-}
 
-function unsubscribeUser() {
-  swRegistration.pushManager.getSubscription()
-  .then(function(subscription) {
-    if (subscription) {
-      return subscription.unsubscribe();
-    }
-  })
-  .catch(function(error) {
-    console.log('Error unsubscribing', error);
-  })
-  .then(function() {
-    updateSubscriptionOnServer(null);
-    console.log('User is unsubscribed.');
-    isSubscribed = false;
+  // Handle incoming messages. Called when:
+  // - a message is received while the app has focus
+  // - the user clicks on an app notification created by a sevice worker
+  //   `messaging.setBackgroundMessageHandler` handler.
+  messaging.onMessage(function(payload) {
+    console.log("Message received. ", payload);
   });
-}
 
-function init() {
+  function resetUI() {
 
-  // Set the initial subscription value
-  swRegistration.pushManager.getSubscription()
-  .then(function(subscription) {
-    isSubscribed = !(subscription === null);
+    // Get Instance ID token. Initially this makes a network call, once retrieved
+    // subsequent calls to getToken will return from cache.
+    messaging.getToken()
+    .then(function(currentToken) {
+      if (currentToken) {
+        sendTokenToServer(currentToken);
+      } else {
+        console.log('No Instance ID token available. Request permission to generate one.');
+        setTokenSentToServer(false);
+        requestPermission();
+      }
+    })
+    .catch(function(err) {
+      console.log('An error occurred while retrieving token. ', err);
+      setTokenSentToServer(false);
+    });
+  }
 
-    updateSubscriptionOnServer(subscription);
-
-    if (isSubscribed) {
-      console.log('User IS subscribed.');
+  // Send the Instance ID token your application server, so that it can:
+  // - send messages back to this app
+  // - subscribe/unsubscribe the token from topics
+  function sendTokenToServer(currentToken) {
+    if (!isTokenSentToServer()) {
+      console.log('Sending token to server...');
+      // TODO(developer): Send the current token to your server.
+      setTokenSentToServer(true);
     } else {
-      console.log('User is NOT subscribed.');
-      subscribeUser();
+      console.log('Token already sent to server so won\'t send it again ' +
+        'unless it changes');
     }
-  });
-}
+  }
 
-if ('serviceWorker' in navigator && 'PushManager' in window) {
-  // console.log('Service Worker and Push is supported');
+  function isTokenSentToServer() {
+    if (window.localStorage.getItem('sentToServer') == 1) {
+      return true;
+    }
+    return false;
+  }
 
-  navigator.serviceWorker.register('../assets/js/sw.js')
-  .then(function(swReg) {
-    console.log('Service Worker is registered', swReg);
+  function setTokenSentToServer(sent) {
+    window.localStorage.setItem('sentToServer', sent?1:0);
+  }
 
-    swRegistration = swReg;
-    init();
-  })
-  .catch(function(error) {
-    console.error('Service Worker Error', error);
-  });
-} else {
-  console.warn('Push messaging is not supported');
-}
+
+  function requestPermission() {
+    console.log('Requesting permission...');
+    messaging.requestPermission()
+    .then(function() {
+      console.log('Notification permission granted.');
+      resetUI();
+    })
+    .catch(function(err) {
+      console.log('Unable to get permission to notify.', err);
+    });
+  }
+
+  function deleteToken() {
+    // Delete Instance ID token.
+    // [START delete_token]
+    messaging.getToken()
+    .then(function(currentToken) {
+      messaging.deleteToken(currentToken)
+      .then(function() {
+        console.log('Token deleted.');
+        setTokenSentToServer(false);
+        // [START_EXCLUDE]
+        // Once token is deleted update UI.
+        resetUI();
+        // [END_EXCLUDE]
+      })
+      .catch(function(err) {
+        console.log('Unable to delete token. ', err);
+      });
+      // [END delete_token]
+    })
+    .catch(function(err) {
+      console.log('Error retrieving Instance ID token. ', err);
+      showToken('Error retrieving Instance ID token. ', err);
+    });
+  }
+
+  resetUI();
