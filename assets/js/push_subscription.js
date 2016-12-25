@@ -111,7 +111,6 @@
     })
     .catch(function(err) {
       console.log('Error retrieving Instance ID token. ', err);
-      showToken('Error retrieving Instance ID token. ', err);
     });
   }
 
