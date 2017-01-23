@@ -9,8 +9,6 @@ date: 2017-01-09
 ---
 
 
-***Career Options***
-
 Clearing JEE Advanced is considered to be gargantuan task and every year
 lakhs of candidates pull up their socks before appearing for the
 examination. Out of these, around 9000 brilliant minds enter the
@@ -20,7 +18,7 @@ gates for many career options in front of them. The dilemma of “*whether
 I’ll get placed or not??? “*is not a worry to an IITian as he has a wide
 range of opportunities knocking at his door.
 
-*Research……..*
+**Research……..**
 
 Students with a skeptical mind and a want to explore the depths of their
 field of interest might find a state of peace by opting for a career in
@@ -37,10 +35,9 @@ under the guidance of a faculty at foreign universities. DAAD (German
 Academics Exchange Program), MITACS are some of the alternatives to
 strengthen one’s research experience.
 
-*Start-ups and Entrepreneurship….*
+**Start-ups and Entrepreneurship….**
 
-“*The way to get started is to quit talking and begin doing” - Walt*
-Disney.
+“**The way to get started is to quit talking and begin doing” - Walt Disney**.
 
 There are students in IITs who consider the above quote to be a gospel
 truth. So, as a matter of fact, they quit talking and open their
@@ -57,7 +54,7 @@ Exelixi, started by two IIM graduates, along with other like
 Twenty19.com, Myntra, and Drivekool are hiring students for paid
 interns.
 
-*Competitive Exams…..*
+**Competitive Exams…..**
 
 A large percentage of students, instead of registering for on campus
 placements, opt to take up the challenges posed by various competitive
@@ -74,7 +71,7 @@ Test in Engineering). Some big names in the public sector like SAIL,
 ONGC, IOCL etc. recruit students on the basis of their score in the GATE
 exam.
 
-*Jobs and Placements… *
+**Jobs and Placements…**
 
 Although so many other options are available in IITs, but when it comes
 to statistics, placements are always the most awe-inspiring ones. There

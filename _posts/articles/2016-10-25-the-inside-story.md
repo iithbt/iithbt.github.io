@@ -8,9 +8,6 @@ image:
 date: 2016-10-25
 ---
 
-
-**THE INSIDE STORY **
-
 College: A place to grow, a place to learn, a place where you come as a
 rookie and leave as a master. The foremost phase of anyone’s life, a
 bout of 4 to 5 years where the joy knows no bounds . Every aspect, be it
@@ -104,8 +101,7 @@ Dear readers,
 The story does not terminate here, as we will try to present you about
 the last phase of the engineering arena i.e. “THE POST DEGREE” in our
 up-coming editions. Till then, best wishes for all the new arrivals and
-the departures and keep reading IITHeartbeat
-~(BEATING\\ WITH\\ YOU\\ ALWAYS)~….
+the departures and keep reading IITHeartbeat (BEATING WITH YOU ALWAYS)….
 
 \*THE ABOVE DATAS WERE BASED ON THE SURVEY AT THE CAMPUS OF IIT ROORKEE
 AMONG 200 STUDENTS OF FIRST AND FINAL YEAR STUDENTS. THE DATA MAY VARY

@@ -9,9 +9,7 @@ date: 2017-01-02
 ---
 
 
-***Entrepreneurship – Why and How to enter it?***
-
-India is currently the 3^rd^ largest start-up community in the world.
+India is currently the 3rd largest start-up community in the world.
 According to a report by NASSCOM, start-ups have created over 80,000
 jobs in the country so far. By the end of 2015, they are on a target to
 get a whopping \$5 billion (32,558 crores) funding by private equity,

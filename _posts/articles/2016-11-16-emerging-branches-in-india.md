@@ -9,9 +9,6 @@ date: 2016-11-16
 ---
 
 
-Emerging Branches, Emerging India
-=================================
-
 In recent years, computer science, mechanical engineering, electrical
 engineering, electronics and communications branches of engineering are
 happening to be considered as ‘Core’ engineering branches. It is

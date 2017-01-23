@@ -41,21 +41,21 @@ had to live away from my family. But the days passed by and I made some
 very good friends. In later years of my college life, many a times I
 needed to stay back in college and things went good.
 
-**What did you do in your summer vacations at the end of 1^st^ and 2^nd^
+**What did you do in your summer vacations at the end of 1st and 2nd
 year which mostly students waste doing nothing?**
 
-At the end of 1^st^ year, I came back home and joined some computer
-courses to learn various programming languages. At the end of 2^nd^
+At the end of 1st year, I came back home and joined some computer
+courses to learn various programming languages. At the end of 2nd
 year, I did a project under Summer Undergraduate Research Award (SURA).
-My project was selected and I got 1^st^ prize for that. It was a very
+My project was selected and I got 1st prize for that. It was a very
 worthy experience for me.
 
-**What target did you set for your 3^rd^ year?**
+**What target did you set for your 3rd year?**
 
-At the end of 5^th^ semester, I actually started mailing the professors
+At the end of 5th semester, I actually started mailing the professors
 to get a foreign internship in my interest areas. Fortunately, I got
 response from two institutes, one in Germany and other in Honda Research
-Institute, Japan. I went to Germany for my 3^rd^ year internship.
+Institute, Japan. I went to Germany for my 3rd year internship.
 
 **What was your next step after coming back from internship?**
 
