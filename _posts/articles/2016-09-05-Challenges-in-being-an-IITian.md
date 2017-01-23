@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Challenges in being an IITian"
+categories: articles
+excerpt: A person invests as much as two precious years of life stressfully studying to clear the JEE exam,
+image: 
+  feature: welcome.jpg
+date: 2016-09-05
+---
+
+
 **Challenges in being an IITian**
 
 A person invests as much as two precious years of life stressfully

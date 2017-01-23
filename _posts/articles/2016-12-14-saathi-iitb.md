@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Saathi: A Social Initiative of IITB"
+categories: articles
+excerpt: IIT Bombay, with a whole lot of boys and just a smattering of girls may well be one of the most unevenly divided campuses we have around. But wait.
+image: 
+  feature: welcome.jpg
+date: 2016-12-14
+---
+
+
 Saathi: A Social Initiative of IITB
 
 IIT Bombay, with a whole lot of boys and just a smattering of girls may

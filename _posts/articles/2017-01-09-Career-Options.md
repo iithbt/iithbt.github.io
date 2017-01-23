@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Career Options"
+categories: articles
+excerpt: Clearing JEE Advanced is considered to be gargantuan task and every year lakhs of candidates pull up their socks before appearing for the examination.
+image: 
+  feature: welcome.jpg
+date: 2017-01-09
+---
+
+
 ***Career Options***
 
 Clearing JEE Advanced is considered to be gargantuan task and every year

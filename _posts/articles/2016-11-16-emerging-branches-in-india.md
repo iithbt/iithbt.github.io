@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Emerging Branches, Emerging India"
+categories: articles
+excerpt: In recent years, computer science, mechanical engineering, electrical engineering, electronics and communications branches of engineering 
+image: 
+  feature: welcome.jpg
+date: 2016-11-16
+---
+
+
 Emerging Branches, Emerging India
 =================================
 

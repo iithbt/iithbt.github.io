@@ -1,3 +1,15 @@
+---
+layout: post
+title: "Placement Phobia"
+categories: articles
+excerpt: The shrill ringing of the alarm clock declares an end to a troubled night’s sleep.
+image: 
+  feature: welcome.jpg
+date: 2016-11-30
+---
+
+
+
 **6:30 am:** The shrill ringing of the alarm clock declares an end to a
 troubled night’s sleep. A hand reaches out from under the blanket and
 hits the snooze button, as if in a reflex.\

@@ -1,3 +1,14 @@
+---
+layout: post
+title: "THE INSIDE STORY"
+categories: articles
+excerpt: College A place to grow, a place to learn, a place where you come as a rookie and leave as a master.
+image: 
+  feature: welcome.jpg
+date: 2016-10-25
+---
+
+
 **THE INSIDE STORY **
 
 College: A place to grow, a place to learn, a place where you come as a

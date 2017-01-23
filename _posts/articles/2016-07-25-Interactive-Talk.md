@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Interactive talk"
+categories: articles
+excerpt: In the competitive race engulfing the campus, everyone is running after career and money. And it is necessary too. 
+image: 
+  feature: welcome.jpg
+date: 2016-07-25
+---
+
+
 ***Interactive talk***
 
 In the competitive race engulfing the campus, everyone is running after
