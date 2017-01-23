@@ -6,7 +6,7 @@ search_omit: true
 ---
 
 <ul class="post-list">
-{% for post in site.posts limit:10 %}
+{% for post in site.posts limit:30 %}
   <li style="height:270px;"><article>
   <div class="post-thumb" style="{% assign loopindex = forloop.index | modulo: 2 %}{% if loopindex == 1 %}float:left;{%else %}float:right;{% endif %}"><img {% if post.image.feature %}src="{{ site.url }}/images/{{ post.image.feature }}" {% else %}src="{{ site.url }}/images/site-logo.png"{% endif %} height="100%" width="100%" alt="{{ post.title }}"></div>
   <div class="post-content" style="{% assign loopindex = forloop.index | modulo: 2 %}{% if loopindex == 1 %}float:right;{%else %}float:left;{% endif %}">

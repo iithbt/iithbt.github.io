@@ -82,7 +82,7 @@ search_omit: true
 </div>
 
 <div class="waterfall" data-col-min-width="300" data-autoresize="true"> 
-{% for post in site.posts limit:10 %}
+{% for post in site.posts limit:30 %}
 <article class="post-box">
     <div class="image-container">
         <a href="{{ site.url }}{{ post.url }}" class="link"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}" class="post-image" /></a>
