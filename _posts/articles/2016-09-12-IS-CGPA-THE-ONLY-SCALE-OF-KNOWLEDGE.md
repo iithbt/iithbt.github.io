@@ -4,7 +4,7 @@ title: "Is CGPA the only scale of knowledge"
 categories: articles
 excerpt: Let me start by introducing the concept of Cumulative Grade Point Average (or C.G.P.A. for short) for those who are unacquainted.
 image: 
-  feature: welcome.jpg
+  feature: cgpa.jpg
 date: 2016-09-12
 ---
 

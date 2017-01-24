@@ -4,7 +4,7 @@ title: "Placement Phobia"
 categories: articles
 excerpt: The shrill ringing of the alarm clock declares an end to a troubled night’s sleep.
 image: 
-  feature: welcome.jpg
+  feature: placement.jpg
 date: 2016-11-30
 ---
 
