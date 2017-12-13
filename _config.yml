@@ -5,7 +5,7 @@ locale: en_US
 description: IIT HeartBeat is the official Inter-IIT Magazine. It provides insight into the activities of all IITs.
 logo: iit-hbt.png
 search: true
-url:  https://iithbt.in #http://localhost:4000/
+url:  http://hbt.iitr.ac.in #https://iithbt.in #http://localhost:4000/
 # url:  http://127.0.0.1:4000/
 
 
